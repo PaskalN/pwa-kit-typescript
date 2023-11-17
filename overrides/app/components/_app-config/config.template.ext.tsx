@@ -1,11 +1,17 @@
 import React from 'react'
+import {Fonts} from '../fonts'
 
 const ConfigTemplateExtension: React.FC<{
     configProps: PWAKitAppConfig.ComponentProps
     children: React.ReactNode | Array<React.ReactNode>
 }> = (props) => {
     const {children} = props
-    return <>{children}</>
+    return (
+        <>
+            <Fonts />
+            {children}
+        </>
+    )
 }
 
 export default ConfigTemplateExtension

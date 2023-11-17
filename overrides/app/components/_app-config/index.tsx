@@ -5,7 +5,7 @@ import {ChakraProvider} from '@chakra-ui/react'
 
 import 'focus-visible/dist/focus-visible'
 
-import theme from '@salesforce/retail-react-app/app/theme'
+import {themeDefault} from '../../theme'
 
 import {useCorrelationId} from '@salesforce/pwa-kit-react-sdk/ssr/universal/hooks'
 import {getAppOrigin} from '@salesforce/pwa-kit-react-sdk/utils/url'
@@ -44,7 +44,7 @@ const AppConfig: PWAKitAppConfig.Page = (props) => {
             OCAPISessionsURL={`${appOrigin}/mobify/proxy/ocapi/s/${locals.site?.id}/dw/shop/v22_8/sessions`}
         >
             <MultiSiteProvider site={locals.site} locale={locals.locale} buildUrl={locals.buildUrl}>
-                <ChakraProvider theme={theme}>
+                <ChakraProvider theme={themeDefault}>
                     <ConfigTemplateExtension configProps={props}>
                         {children}
                     </ConfigTemplateExtension>

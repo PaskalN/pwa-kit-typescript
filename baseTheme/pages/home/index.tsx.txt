@@ -1,0 +1,41 @@
+import React from 'react'
+import {UseQueryResult} from '@tanstack/react-query'
+
+import * as CommerceApi from '@salesforce/commerce-sdk-react'
+// import {Box} from '@chakra-ui/react'
+
+const useQueryHandler = (): {
+    product: UseQueryResult<CommerceSDK.Product$0>
+} => {
+    const product = CommerceApi.useProduct({
+        parameters: {
+            id: 'womens-jewelry-bundleM'
+        }
+    }) as UseQueryResult<CommerceSDK.Product$0>
+
+    return {
+        product
+    }
+}
+
+const Home = () => {
+    const query = useQueryHandler()
+
+    if (query.product.isLoading) {
+        return <>Loading...</>
+    }
+
+    if (query.product.isError) {
+        return <>Error...</>
+    }
+
+    if (query.product.isSuccess) {
+        return <pre>{JSON.stringify(query.product.data)}</pre>
+    }
+
+    return <>Hello Home PWA Kit 3</>
+}
+
+Home.getTemplateName = () => 'home'
+
+export default Home
