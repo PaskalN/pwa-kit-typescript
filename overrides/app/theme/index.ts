@@ -10,6 +10,7 @@ import layerStyles from './foundations/layerStyles'
 
 // Base component style
 import Text from './components/base/text'
+import Heading from './components/base/heading'
 
 // Project Component
 
@@ -34,7 +35,9 @@ const themeExt = {
      */
     components: {
         // Base
-        Text
+        Text,
+
+        Heading
     }
 }
 

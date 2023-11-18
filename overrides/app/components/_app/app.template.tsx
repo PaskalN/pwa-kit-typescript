@@ -2,9 +2,9 @@ import React from 'react'
 import {Box, Flex} from '@chakra-ui/react'
 
 // Components
-import Header from '../header'
-import MainNavigation from '../main-navigation'
-
+import Logo from '../project/logo'
+import Header from '../project/header'
+import MainNavigation from '../project/main-navigation'
 // Tools
 import {useLazyLoadCategories} from './app.tools'
 import {flatten} from '@salesforce/retail-react-app/app/utils/utils'
@@ -43,7 +43,8 @@ const AppTemplate: React.FC<{
                     boxShadow="12"
                 >
                     <Flex layerStyle="page-section" padding="0">
-                        <Flex layerStyle="page-segment" py="0">
+                        <Flex layerStyle="page-segment" py="0" flexDir="row" gap="1rem">
+                            <Logo />
                             <MainNavigation entry={entryCategories} />
                         </Flex>
                     </Flex>

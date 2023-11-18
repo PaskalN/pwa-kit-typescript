@@ -1,12 +1,12 @@
 {
   "name": "client",
-  "hash": "496ca399e2067d92c17f",
+  "hash": "b0412f381fe9447e560a",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/home/n-book/Documents/pwa-kit-typescript/build",
   "assetsByChunkName": {
     "main": [
       "main.js",
-      "main.e7434604e4971ea233de.hot-update.js"
+      "main.789c0897935dcf21e8b6.hot-update.js"
     ],
     "pages-home": [
       "pages-home.js"
@@ -49,7 +49,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 484827,
+      "size": 494178,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -148,17 +148,17 @@
     },
     {
       "type": "asset",
-      "name": "main.e7434604e4971ea233de.hot-update.js",
-      "size": 4056,
+      "name": "main.789c0897935dcf21e8b6.hot-update.js",
+      "size": 4252,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "hotModuleReplacement": true,
         "immutable": true,
-        "fullhash": "e7434604e4971ea233de",
+        "fullhash": "789c0897935dcf21e8b6",
         "related": {
-          "sourceMap": "main.e7434604e4971ea233de.hot-update.js.map"
+          "sourceMap": "main.789c0897935dcf21e8b6.hot-update.js.map"
         }
       },
       "chunkNames": [
@@ -198,7 +198,7 @@
     },
     {
       "type": "asset",
-      "name": "main.e7434604e4971ea233de.hot-update.json",
+      "name": "main.789c0897935dcf21e8b6.hot-update.json",
       "size": 28,
       "emitted": false,
       "comparedForEmit": false,
@@ -206,7 +206,7 @@
       "info": {
         "hotModuleReplacement": true,
         "immutable": true,
-        "fullhash": "e7434604e4971ea233de"
+        "fullhash": "789c0897935dcf21e8b6"
       },
       "chunkNames": [],
       "chunkIdHints": [],
@@ -231,7 +231,7 @@
           "name": "main.js"
         },
         {
-          "name": "main.e7434604e4971ea233de.hot-update.js"
+          "name": "main.789c0897935dcf21e8b6.hot-update.js"
         }
       ],
       "filteredAssets": 0,
@@ -290,7 +290,7 @@
       "id": "main",
       "files": [
         "main.js",
-        "main.e7434604e4971ea233de.hot-update.js"
+        "main.789c0897935dcf21e8b6.hot-update.js"
       ]
     },
     {

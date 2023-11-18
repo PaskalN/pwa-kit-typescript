@@ -8,7 +8,7 @@ import {Flex, FlexProps, Link, Text, Divider} from '@chakra-ui/react'
 import {categoryUrlBuilder} from '@salesforce/retail-react-app/app/utils/url'
 
 // Context
-import {useCategoryContext} from '../../context'
+import {useCategoryContext} from '../../../context'
 
 export const NavItem: React.FC<
     {
