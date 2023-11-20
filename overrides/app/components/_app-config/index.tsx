@@ -2,23 +2,30 @@ import React from 'react'
 import {ChakraProvider} from '@chakra-ui/react'
 
 // Removes focus for non-keyboard interactions for the whole application
-
 import 'focus-visible/dist/focus-visible'
-
 import {themeDefault} from '../../theme'
 
-import {useCorrelationId} from '@salesforce/pwa-kit-react-sdk/ssr/universal/hooks'
-import {getAppOrigin} from '@salesforce/pwa-kit-react-sdk/utils/url'
+// Providers
 import {CommerceApiProvider} from '@salesforce/commerce-sdk-react'
-import {MultiSiteProvider} from '@salesforce/retail-react-app/app/contexts'
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 
-import {resolveSiteFromUrl} from '@salesforce/retail-react-app/app/utils/site-utils'
-import {resolveLocaleFromUrl} from '@salesforce/retail-react-app/app/utils/site-utils'
+// CONTEXTS
+import {MultiSiteProvider} from '../../context'
+
+// SDK Utils
+import {useCorrelationId} from '@salesforce/pwa-kit-react-sdk/ssr/universal/hooks'
+import {getAppOrigin} from '@salesforce/pwa-kit-react-sdk/utils/url'
 import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
-import {createUrlTemplate} from '@salesforce/retail-react-app/app/utils/url'
+
+// Project Utils
+import {resolveSiteFromUrl} from '../../utils/site-utils'
+import {resolveLocaleFromUrl} from '../../utils/site-utils'
+import {createUrlTemplate} from '../../utils/urls'
+
+// Queries
 import {withReactQuery} from '@salesforce/pwa-kit-react-sdk/ssr/universal/components/with-react-query'
 
+// Templates
 import ConfigTemplateExtension from './config.template.ext'
 
 const AppConfig: PWAKitAppConfig.Page = (props) => {

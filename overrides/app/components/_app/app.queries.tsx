@@ -1,7 +1,14 @@
+// SDK
 import {useAccessToken, useCommerceApi} from '@salesforce/commerce-sdk-react'
-import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
-import useMultiSite from '@salesforce/retail-react-app/app/hooks/use-multi-site'
 import * as queryKeyHelpers from '@salesforce/commerce-sdk-react/hooks/ShopperProducts/queryKeyHelpers'
+
+// Runtime
+import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
+
+// Hooks
+import useMultiSite from '../../hooks/use-multi-site'
+
+// Queries
 import {useQueries} from '@tanstack/react-query'
 
 export const useCategoryBulk = (

@@ -15,3 +15,7 @@ type UseCurrentBasket = UseQueryResult<DataType<Client['getCustomerBaskets']>> &
 export const useCurrentBasket = (props?: Record<string, unknown>): UseCurrentBasket => {
     return useCurrentBasketLegacy(props) as UseCurrentBasket
 }
+
+// Extend modules or replace method below
+// Exampe:
+// export const method = (...) => type

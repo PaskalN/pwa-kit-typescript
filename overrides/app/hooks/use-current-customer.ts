@@ -12,3 +12,7 @@ type UseCurrentCustomer = UseQueryResult<DataType<Client['getCustomer']>> & {
 export const useCurrentCustomer = (): UseCurrentCustomer => {
     return useCurrentCustomerLegacy() as UseCurrentCustomer
 }
+
+// Extend modules or replace method below
+// Exampe:
+// export const method = (...) => type

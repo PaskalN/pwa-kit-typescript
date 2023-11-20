@@ -5,9 +5,10 @@ import {Box, Flex} from '@chakra-ui/react'
 import Logo from '../project/logo'
 import Header from '../project/header'
 import MainNavigation from '../project/main-navigation'
+
 // Tools
 import {useLazyLoadCategories} from './app.tools'
-import {flatten} from '@salesforce/retail-react-app/app/utils/utils'
+import {flatten} from '../../utils/utils'
 
 // Constants
 import {CAT_MENU_DEFAULT_ROOT_CATEGORY} from '../../constants'

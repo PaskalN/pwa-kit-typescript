@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-auth-modal'
+export * from '@salesforce/retail-react-app/app/hooks/use-variation-attributes'
 
 // Extend modules or replace method below
 // Exampe:

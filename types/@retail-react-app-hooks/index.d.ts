@@ -92,10 +92,6 @@ declare module '@salesforce/retail-react-app/app/hooks/use-multi-site' {
     export default useMultiSite
 }
 
-declare module '@salesforce/retail-react-app/app/hooks/use-derived-products' {
-    export const useCurrency: () => React.Context<string> | never
-}
-
 declare module '@salesforce/retail-react-app/app/hooks/use-variation-attributes' {
     export const useVariationAttributes: (
         _product?: CommerceSDK.Product$0 | Record<string, unknown>,
@@ -118,22 +114,7 @@ declare module '@salesforce/retail-react-app/app/hooks/use-variant' {
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-currency' {
-    export const useCurrency: (
-        _products: CommerceSDK.Product$0,
-        _isProductPartOfSet?: boolean
-    ) => {
-        showLoading: boolean
-        showInventoryMessage: boolean
-        inventoryMessage: string
-        variationAttributes: RetailReactAppHooks.useVariationAttributesType
-        quantity: number
-        minOrderQuantity: number
-        stepQuantity: number
-        variationParams: Array<string>
-        setQuantity: React.Dispatch<React.SetStateAction<number>>
-        variant: CommerceSDK.Variant$0 | undefined
-        stockLevel: number
-    }
+    export const useCurrency: () => [string, React.Dispatch<React.SetStateAction<string>>] | never
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-toast' {
@@ -158,7 +139,7 @@ declare module '@salesforce/retail-react-app/app/hooks/use-sort-urls' {
     export const useSortUrls: (_props: UseSortUrlsType) => Array<string>
 }
 
-declare module '@salesforce/retail-react-app/app/hooks/use-search-parameters' {
+declare module '@salesforce/retail-react-app/app/hooks/use-search-params' {
     type SearchparamsType = {
         limit: number
         offset: number
@@ -212,7 +193,8 @@ declare module '@salesforce/retail-react-app/app/hooks/use-page-urls' {
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-navigation' {
-    export const useNavigation: () => (_path: string, action?: string, ...args: unknown) => void
+    const useNavigation: () => (_path: string, action?: string, ...args: unknown) => void
+    export default useNavigation
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-limit-urls' {
@@ -220,10 +202,12 @@ declare module '@salesforce/retail-react-app/app/hooks/use-limit-urls' {
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-intersection-observer' {
-    export const useIntersectionObserver: (
+    const useIntersectionObserver: (
         _ref: React.Ref,
         _options: {useOnce?: boolean} & Record<string, unknown>
     ) => boolean
+
+    export default useIntersectionObserver
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-wishlist' {
@@ -232,3 +216,25 @@ declare module '@salesforce/retail-react-app/app/hooks/use-wishlist' {
 }
 
 // Einstein hook in @retail-react-app
+declare module '@salesforce/retail-react-app/app/hooks/use-derived-product' {
+    export const useDerivedProduct: (
+        _product: CommerceSDK.Product$0,
+        _isProductPartOfSet?: boolean
+    ) => {
+        showLoading: boolean
+        showInventoryMessage: boolean
+        inventoryMessage: string
+        variationAttributes: RetailReactAppHooks.useVariationAttributesType
+        quantity: number
+        minOrderQuantity: number
+        stepQuantity: number
+        variationParams: Array<string>
+        setQuantity: React.Dispatch<React.SetStateAction<number>>
+        variant: CommerceSDK.Variant$0 | undefined
+        stockLevel: number
+    }
+}
+
+declare module '@salesforce/retail-react-app/app/hooks/use-previous' {
+    export const usePrevious: (_value: unknown) => unknown
+}

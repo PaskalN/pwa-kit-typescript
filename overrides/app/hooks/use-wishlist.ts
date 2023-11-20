@@ -12,3 +12,7 @@ export const useWishList = (
 ): UseQueryResult<DataType<Client['getCustomerProductLists']>> => {
     return useWishListLegacy(_props) as UseQueryResult<DataType<Client['getCustomerProductLists']>>
 }
+
+// Extend modules or replace method below
+// Exampe:
+// export const method = (...) => type
