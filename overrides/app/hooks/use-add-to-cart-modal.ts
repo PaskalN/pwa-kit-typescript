@@ -31,3 +31,7 @@ export const AddToCartModalProvider = (
 export const AddToCartModalContext = (): AddToCartModalContextType | null => {
     return AddToCartModalContextLegacy()
 }
+
+// Extend modules or replace method below
+// Exampe:
+// export const method = (...) => type

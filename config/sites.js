@@ -17,7 +17,7 @@ module.exports = [
             supportedLocales: [
                 {
                     id: 'en-US',
-                    // alias: 'us',
+                    alias: 'us',
                     preferredCurrency: 'USD'
                 }
             ]
