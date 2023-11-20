@@ -59,13 +59,13 @@ declare module '@salesforce/retail-react-app/app/utils/locale' {
     export const MESSAGE_PROPTYPE: Record<string, unknown>
 }
 
-// declare module '@salesforce/retail-react-app/app/utils/routes-utils' {
-//     export const configureRoutes: (
-//         _routes: Array<RouteProps>,
-//         _config?: PWAKitRuntime.Config,
-//         _options: ConfigureRoutes.Options
-//     ) => Array<RouteProps>
-// }
+declare module '@salesforce/retail-react-app/app/utils/routes-utils' {
+    export const configureRoutes: (
+        _routes: Array<RouteProps>,
+        _config?: PWAKitRuntime.Config,
+        _options: ConfigureRoutes.Options
+    ) => Array<RouteProps>
+}
 
 declare module '@salesforce/retail-react-app/app/utils/site-utils' {
     export function resolveSiteFromUrl(_url?: string): PWAKitRuntime.SiteConfig | never
@@ -99,35 +99,35 @@ declare module '@salesforce/retail-react-app/app/utils/site-utils' {
     export function resolveLocaleFromUrl(_url?: string): PWAKitRuntime.Locale | never
 }
 
-// declare module '@salesforce/retail-react-app/app/utils/url' {
-//     export const absoluteUrl: (_path?: string) => string
-//     export function rebuildPathWithParams(_url: string, extraParams: URLSearchParams): string
-//     export function updateSearchParams(
-//         searchParams: URLSearchParams,
-//         newParams: URLSearchParams
-//     ): void
-//     export function buildUrlSet(
-//         url: string,
-//         key: string,
-//         values = Array<unknown>,
-//         extraParams: URLSearchParams
-//     ): Array<string>
-//     export function categoryUrlBuilder(_category: CommerceSDK.Category): string
-//     export function productUrlBuilder(_product: CommerceSDK.Product$0): string
-//     export function searchUrlBuilder(_searchTerm: string): string
-//     export function getPathWithLocale(
-//         _shortCode: string,
-//         _buildUrl: PWAKitRuntime.BuildUrl,
-//         _opts = Record<string, unknown>
-//     ): string
-//     export function createUrlTemplate(
-//         _appConfig: PWAKitRuntime.AppConfig,
-//         _siteRef: string,
-//         _localeRef: string
-//     ): (_path: string, _site: string, locale: string) => string
-//     export function removeQueryParamsFromPath(_path: string, _keys: Array<unknown>): string
-//     export function removeSiteLocaleFromPath(_pathName: string): string
-// }
+declare module '@salesforce/retail-react-app/app/utils/url' {
+    export const absoluteUrl: (_path?: string) => string
+    export function rebuildPathWithParams(_url: string, extraParams: URLSearchParams): string
+    export function updateSearchParams(
+        searchParams: URLSearchParams,
+        newParams: URLSearchParams
+    ): void
+    export function buildUrlSet(
+        url: string,
+        key: string,
+        values = Array<unknown>,
+        extraParams: URLSearchParams
+    ): Array<string>
+    export function categoryUrlBuilder(_category: CommerceSDK.Category): string
+    export function productUrlBuilder(_product: CommerceSDK.Product$0): string
+    export function searchUrlBuilder(_searchTerm: string): string
+    export function getPathWithLocale(
+        _shortCode: string,
+        _buildUrl: PWAKitRuntime.BuildUrl,
+        _opts = Record<string, unknown>
+    ): string
+    export function createUrlTemplate(
+        _appConfig: PWAKitRuntime.AppConfig,
+        _siteRef: string,
+        _localeRef: string
+    ): (_path: string, _site: string, locale: string) => string
+    export function removeQueryParamsFromPath(_path: string, _keys: Array<unknown>): string
+    export function removeSiteLocaleFromPath(_pathName: string): string
+}
 
 declare module '@salesforce/retail-react-app/app/utils/cc-utils' {
     export function formatCreditCardNumber(
