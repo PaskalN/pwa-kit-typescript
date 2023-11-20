@@ -37,10 +37,10 @@ declare namespace PWAKitRuntime {
         preferredCurrency: string
     } & Record<string, unknown>
 
-    type BuildUrl = (_path: string, _site?: string, _locale?: string) => string
+    type BuildUrl = (_path: string, _site: string, locale: string) => string
 
     type Locals = {
-        buildUrl: PWAKitRuntime.BuildUrl
+        buildUrl: BuildUrl
         site: PWAKitRuntime.SiteConfig
         locale: PWAKitRuntime.Locale
         appConfig: PWAKitRuntime.AppConfig

@@ -59,13 +59,13 @@ declare module '@salesforce/retail-react-app/app/utils/locale' {
     export const MESSAGE_PROPTYPE: Record<string, unknown>
 }
 
-declare module '@salesforce/retail-react-app/app/utils/routes-utils' {
-    export const configureRoutes: (
-        _routes: Array<RouteProps>,
-        _config?: PWAKitRuntime.Config,
-        _options: ConfigureRoutes.Options
-    ) => Array<RouteProps>
-}
+// declare module '@salesforce/retail-react-app/app/utils/routes-utils' {
+//     export const configureRoutes: (
+//         _routes: Array<RouteProps>,
+//         _config?: PWAKitRuntime.Config,
+//         _options: ConfigureRoutes.Options
+//     ) => Array<RouteProps>
+// }
 
 declare module '@salesforce/retail-react-app/app/utils/site-utils' {
     export function resolveSiteFromUrl(_url?: string): PWAKitRuntime.SiteConfig | never
@@ -99,32 +99,137 @@ declare module '@salesforce/retail-react-app/app/utils/site-utils' {
     export function resolveLocaleFromUrl(_url?: string): PWAKitRuntime.Locale | never
 }
 
-declare module '@salesforce/retail-react-app/app/utils/url' {
-    export function absoluteUrl(_path?: string): URL
-    export function rebuildPathWithParams(_url: string, extraParams: URLSearchParams): string
-    export function updateSearchParams(
-        searchParams: URLSearchParams,
-        newParams: URLSearchParams
-    ): void
-    export function buildUrlSet(
-        url: string,
-        key: string,
-        values = Array<unknown>,
-        extraParams: URLSearchParams
-    ): Array<string>
-    export function categoryUrlBuilder(_category: CommerceSDK.Category): string
-    export function productUrlBuilder(_product: CommerceSDK.Product$0): string
-    export function searchUrlBuilder(_searchTerm: string): string
-    export function getPathWithLocale(
-        _shortCode: string,
-        _buildUrl: PWAKitRuntime.BuildUrl,
-        _opts = Record<string, unknown>
+// declare module '@salesforce/retail-react-app/app/utils/url' {
+//     export const absoluteUrl: (_path?: string) => string
+//     export function rebuildPathWithParams(_url: string, extraParams: URLSearchParams): string
+//     export function updateSearchParams(
+//         searchParams: URLSearchParams,
+//         newParams: URLSearchParams
+//     ): void
+//     export function buildUrlSet(
+//         url: string,
+//         key: string,
+//         values = Array<unknown>,
+//         extraParams: URLSearchParams
+//     ): Array<string>
+//     export function categoryUrlBuilder(_category: CommerceSDK.Category): string
+//     export function productUrlBuilder(_product: CommerceSDK.Product$0): string
+//     export function searchUrlBuilder(_searchTerm: string): string
+//     export function getPathWithLocale(
+//         _shortCode: string,
+//         _buildUrl: PWAKitRuntime.BuildUrl,
+//         _opts = Record<string, unknown>
+//     ): string
+//     export function createUrlTemplate(
+//         _appConfig: PWAKitRuntime.AppConfig,
+//         _siteRef: string,
+//         _localeRef: string
+//     ): (_path: string, _site: string, locale: string) => string
+//     export function removeQueryParamsFromPath(_path: string, _keys: Array<unknown>): string
+//     export function removeSiteLocaleFromPath(_pathName: string): string
+// }
+
+declare module '@salesforce/retail-react-app/app/utils/cc-utils' {
+    export function formatCreditCardNumber(
+        _cardNumber?: string,
+        _opts?: {
+            gaps: Array<number>
+            lengths: Array<number>
+        } & Record<string, unknown>
     ): string
-    export function createUrlTemplate(
-        _appConfig: PWAKitRuntime.AppConfig,
-        _siteRef: string,
-        _localeRef: string
-    ): (_path: string, _site: string, locale: string) => string
-    export function removeQueryParamsFromPath(_path: string, _keys: Array<unknown>): string
-    export function removeSiteLocaleFromPath(_pathName: string): string
+
+    export function getCreditCardIcon(_type: string): React.JSX.Element | undefined
+    export function getPaymentInstrumentCardType(_type: string): string | undefined
+    export function getMaskCreditCardNumber(_cardNumber: string): string
+
+    export function createCreditCardPaymentBodyFromForm(
+        _paymentFormData: Record<string, unknown> & {
+            expiry: string
+            paymentInstrumentId: string
+        }
+    ): {
+        paymentMethodId: string
+        paymentCard: {
+            number: string
+            cardType: string | undefined
+            expirationMonth: number
+            expirationYear: number
+            issueNumber: string
+            validFromMonth: number
+            validFromYear: number
+        } & Record<string, unknown>
+    }
+}
+
+declare module '@salesforce/retail-react-app/app/utils/image-groups-utils' {
+    export function findImageGroupBy(
+        _imageGroups: Array<CommerceSDK.ImageGroup>,
+        _options: {
+            viewType: string
+            selectedVariationAttributes: {
+                color?: string
+                size?: string
+            } & Record<string, unknown>
+        }
+    ): CommerceSDK.ImageGroup
+}
+
+declare module '@salesforce/retail-react-app/app/utils/password-utils' {
+    export function validatePassword(_value: string): {
+        hasMinChars: boolean
+        hasUppercase: boolean
+        hasLowercase: boolean
+        hasNumber: boolean
+        hasSpecialChar: boolean
+    }
+}
+
+declare module '@salesforce/retail-react-app/app/utils/locale' {
+    export function fetchTranslations(_locale: string):
+        | Promise<
+              Record<
+                  string,
+                  Array<{
+                      type: number
+                      value: string
+                  }>
+              >
+          >
+        | never
+
+    export function getTargetLocale(_props: {
+        getUserPreferredLocales?: () => unknown
+        l10nConfig?: PWAKitRuntime.l10nConfig
+    }): string
+
+    export function determineTargetLocale(_props: {
+        preferredLocales: Array<string>
+        supportedLocales: Array<string>
+        fallbackLocale: string
+    }): string
+}
+
+declare module '@salesforce/retail-react-app/app/utils/phone-utils' {
+    export function formatPhoneNumber(_value: string): string
+}
+
+declare module '@salesforce/retail-react-app/app/utils/product-utils' {
+    export function getDisplayVariationValues(
+        _variationAttributes: Array<CommerceSDK.VariationAttribute>,
+        _values: Record<string, string>
+    ): Record<string, string>
+}
+
+declare module '@salesforce/retail-react-app/app/utils/responsive-image' {
+    export function getResponsiveImageAttributes(_props: {
+        _src: string
+        _widths: Record<string, number | string | Record<string, unknown>>
+        _breakpoints?: Record<string, unknown>
+    }): {
+        src: string
+        sizes: string
+        srcSet: string
+    }
+
+    export function getSrc(_dynamicSrc: string, _imageWidth: number): string
 }
