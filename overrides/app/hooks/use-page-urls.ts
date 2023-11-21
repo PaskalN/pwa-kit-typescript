@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-page-urls'
+export * from '../../core/hooks/use-page-urls'
 
 // Extend modules or replace method below
 // Exampe:

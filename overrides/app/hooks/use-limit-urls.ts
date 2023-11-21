@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-limit-urls'
+export * from '../../core/hooks/use-limit-urls'
 
 // Extend modules or replace method below
 // Exampe:

@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-product-view-modal'
+export * from '../../core/hooks/use-product-view-modal'
 
 // Extend modules or replace method below
 // Exampe:

@@ -1,4 +1,4 @@
-import useEinstein from '@salesforce/retail-react-app/app/hooks/use-einstein'
+import useEinstein from '../../core/hooks/use-einstein'
 
 export default useEinstein
 

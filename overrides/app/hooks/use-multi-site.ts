@@ -1,4 +1,4 @@
-import useMultiSite from '@salesforce/retail-react-app/app/hooks/use-multi-site'
+import useMultiSite from '../../core/hooks/use-multi-site'
 
 export default useMultiSite
 

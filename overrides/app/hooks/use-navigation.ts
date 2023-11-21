@@ -1,4 +1,4 @@
-import useNavigation from '@salesforce/retail-react-app/app/hooks/use-navigation'
+import useNavigation from '../../core/hooks/use-navigation'
 
 export default useNavigation
 

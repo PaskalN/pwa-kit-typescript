@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/utils/responsive-image'
+export * from '../../core/utils/responsive-image'
 
 // Extend modules or replace method below
 // Exampe:

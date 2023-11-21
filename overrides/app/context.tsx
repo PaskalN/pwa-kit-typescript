@@ -1,7 +1,7 @@
 import React, {createContext, useContext, useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 
-export * from '@salesforce/retail-react-app/app/contexts'
+export * from '../core/context'
 
 export const CategoryContext = createContext<{
     isCategoryPage: boolean

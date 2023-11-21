@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/utils/image-groups-utils'
+export * from '../../core/utils/image-groups-utils'
 
 // Extend modules or replace method below
 // Exampe:

@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-variation-params'
+export * from '../../core/hooks/use-variation-params'
 
 // Extend modules or replace method below
 // Exampe:

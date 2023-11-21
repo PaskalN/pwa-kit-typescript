@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-toast'
+export * from '../../core/hooks/use-toast'
 
 // Extend modules or replace method below
 // Exampe:

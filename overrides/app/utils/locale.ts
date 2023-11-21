@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/utils/locale'
+export * from '../../core/utils/locale'
 
 // Extend modules or replace method below
 // Exampe:

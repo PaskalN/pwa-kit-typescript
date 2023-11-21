@@ -1,4 +1,4 @@
-import useIntersectionObserver from '@salesforce/retail-react-app/app/hooks/use-intersection-observer'
+import useIntersectionObserver from '../../core/hooks/use-intersection-observer'
 
 export default useIntersectionObserver
 

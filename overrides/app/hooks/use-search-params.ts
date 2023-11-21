@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/hooks/use-search-params'
+export * from '../../core/hooks/use-search-params'
 
 // Extend modules or replace method below
 // Exampe:

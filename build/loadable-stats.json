@@ -1,11 +1,12 @@
 {
   "name": "client",
-  "hash": "6ed20d4a00017e3ee27d",
+  "hash": "5189138d885bc1c00f90",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/home/n-book/Documents/pwa-kit-typescript/build",
   "assetsByChunkName": {
     "main": [
-      "main.js"
+      "main.js",
+      "main.4f7db7d70fdfbfc49e57.hot-update.js"
     ],
     "pages-home": [
       "pages-home.js"
@@ -48,7 +49,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 509905,
+      "size": 530905,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -98,7 +99,7 @@
     {
       "type": "asset",
       "name": "pages-home.js",
-      "size": 51319,
+      "size": 84450,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -117,6 +118,33 @@
       "filteredRelated": 1,
       "chunks": [
         "pages-home"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.4f7db7d70fdfbfc49e57.hot-update.js",
+      "size": 7149,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4f7db7d70fdfbfc49e57",
+        "related": {
+          "sourceMap": "main.4f7db7d70fdfbfc49e57.hot-update.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "main"
       ],
       "auxiliaryChunks": []
     },
@@ -167,6 +195,25 @@
         "_1242"
       ],
       "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.4f7db7d70fdfbfc49e57.hot-update.json",
+      "size": 28,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4f7db7d70fdfbfc49e57"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
     }
   ],
   "namedChunkGroups": {
@@ -182,11 +229,14 @@
         },
         {
           "name": "main.js"
+        },
+        {
+          "name": "main.4f7db7d70fdfbfc49e57.hot-update.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 3,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -239,7 +289,8 @@
     {
       "id": "main",
       "files": [
-        "main.js"
+        "main.js",
+        "main.4f7db7d70fdfbfc49e57.hot-update.js"
       ]
     },
     {

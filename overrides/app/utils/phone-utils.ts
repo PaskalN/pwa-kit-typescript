@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/utils/phone-utils'
+export * from '../../core/utils/phone-utils'
 
 // Extend modules or replace method below
 // Exampe:

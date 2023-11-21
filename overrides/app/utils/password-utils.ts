@@ -1,4 +1,4 @@
-export * from '@salesforce/retail-react-app/app/utils/password-utils'
+export * from '../../core/utils/password-utils'
 
 // Extend modules or replace method below
 // Exampe:
