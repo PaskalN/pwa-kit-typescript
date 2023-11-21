@@ -1,6 +1,10 @@
 'use strict'
 import WEBPACK_CONFIG from '@salesforce/pwa-kit-dev/configs/webpack/config'
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+
+import { webpackClientConfig } from './overrides/core/webpack/webpack.client.config'
+import { webpackClientOptionalConfig } from './overrides/core/webpack/webpack.client.optional.config'
+import { webpackRendererConfig } from './overrides/core/webpack/webpack.renderer'
+import { webpackSsrConfig } from './overrides/core/webpack/webpack.ssr.config'
 
 // ALL CONFIGS IN PWA KIT WEBPACK
 const _CONFIGS = {
@@ -11,22 +15,11 @@ const _CONFIGS = {
     REQUEST_PROCESSOR: 4
 }
 
-// CLIENT CONFIG
-const CLIENT_CONFIG = WEBPACK_CONFIG[_CONFIGS.CLIENT]
-
-// Remove existing plugin from the webpack plugins
-// ADD The constructor name in the array EXCLUDE
-const EXCLUDE = []
-const PLUGINS = CLIENT_CONFIG.plugins.filter(plugin => {
-    return !EXCLUDE.includes(plugin.__proto__.constructor.name)
-})
-
-// ADD NEW PLUGINS
-PLUGINS.push(new ForkTsCheckerWebpackPlugin())
-
-// REASIGN PLUGINS
-CLIENT_CONFIG.plugins = PLUGINS
-WEBPACK_CONFIG[_CONFIGS.CLIENT] = CLIENT_CONFIG
+// CLIENT CONFIGS
+WEBPACK_CONFIG[_CONFIGS.CLIENT] = webpackClientConfig()
+WEBPACK_CONFIG[_CONFIGS.SSR] = webpackSsrConfig()
+WEBPACK_CONFIG[_CONFIGS.CLIENT_OPTIONAL] = webpackClientOptionalConfig()
+WEBPACK_CONFIG[_CONFIGS.RENDERER] = webpackRendererConfig()
 
 // EXPORT THE CONFIG
 module.exports = WEBPACK_CONFIG
