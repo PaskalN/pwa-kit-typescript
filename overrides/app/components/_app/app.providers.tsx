@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
+
+// Hooks
 import {useLocation} from 'react-router-dom'
 import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
 import {useQuery, useQueries} from '@tanstack/react-query'
-
 import {
     useAccessToken,
     useCommerceApi,
@@ -15,20 +16,18 @@ import * as queryKeyHelpers from '@salesforce/commerce-sdk-react/hooks/ShopperPr
 import {useDisclosure} from '@chakra-ui/react'
 
 // Contexts
-import {CurrencyProvider} from '@salesforce/retail-react-app/app/contexts'
-import {CategoryProvider} from '../../context'
+import {CategoryProvider, CurrencyProvider} from '../../context'
 
 // Hooks
-import useMultiSite from '@salesforce/retail-react-app/app/hooks/use-multi-site'
+import useMultiSite from '../../hooks/use-multi-site'
 import {useCurrentCustomer} from '../../hooks/use-current-customer'
 import {useCurrentBasket} from '../../hooks/use-current-basket'
 // Localization
 import {IntlProvider} from 'react-intl'
 
 // Others
-import {watchOnlineStatus, isServer} from '@salesforce/retail-react-app/app/utils/utils'
-
-import {getTargetLocale, fetchTranslations} from '@salesforce/retail-react-app/app/utils/locale'
+import {watchOnlineStatus, isServer} from '../../utils/utils'
+import {getTargetLocale, fetchTranslations} from '../../utils/locale'
 import {DEFAULT_LOCALE} from '../../constants'
 
 export const useCategoryBulk = (

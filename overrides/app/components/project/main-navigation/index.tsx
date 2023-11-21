@@ -5,7 +5,7 @@ import {Link as RouteLink} from 'react-router-dom'
 import {Flex, FlexProps, Link, Text, Divider} from '@chakra-ui/react'
 
 // Utils
-import {categoryUrlBuilder} from '@salesforce/retail-react-app/app/utils/url'
+import {categoryUrlBuilder} from '../../../utils/urls'
 
 // Context
 import {useCategoryContext} from '../../../context'
@@ -187,9 +187,8 @@ export const SubNavList: React.FC<
                     )
 
                 return (
-                    <>
+                    <React.Fragment key={index}>
                         <Link
-                            key={index}
                             as={RouteLink}
                             to={categoryUrlBuilder(category)}
                             title={category.pageTitle || category.name}
@@ -210,7 +209,7 @@ export const SubNavList: React.FC<
                         {category.categories && category.categories?.length && (
                             <SubNavList categories={categories} />
                         )}
-                    </>
+                    </React.Fragment>
                 )
             })}
         </Flex>

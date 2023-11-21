@@ -1,6 +1,8 @@
 import React, {createContext, useContext, useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 
+export * from '../core/context'
+
 export const CategoryContext = createContext<{
     isCategoryPage: boolean
     category: CommerceSDK.Category | null

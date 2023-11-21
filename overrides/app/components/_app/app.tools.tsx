@@ -1,10 +1,14 @@
+// CONSTANTS
 import {CAT_MENU_DEFAULT_NAV_SSR_DEPTH, CAT_MENU_DEFAULT_ROOT_CATEGORY} from '../../constants'
 
+// SDK HOOKS
 import {useCategory} from '@salesforce/commerce-sdk-react'
 
+// PROVIDERS
 import {useCategoryBulk} from './app.providers'
 
-import {mergeMatchedItems} from '@salesforce/retail-react-app/app/utils/utils'
+// UTILS
+import {mergeMatchedItems} from '../../utils/utils'
 
 const onClient = typeof window !== 'undefined'
 
