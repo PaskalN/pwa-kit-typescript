@@ -41,7 +41,7 @@ const Category: React.FC & {
     const categoryCtx = useCategoryContext()
     console.log(categoryCtx)
 
-    const {error, data: category} = useCategory(
+    const {data: category} = useCategory(
         {
             parameters: {
                 id: params.categoryId || ''
