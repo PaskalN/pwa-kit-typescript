@@ -2,3 +2,5 @@ build
 coverage
 docs
 app/overrides/static
+process/**/*
+config/**/*
