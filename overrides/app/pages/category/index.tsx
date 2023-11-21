@@ -5,18 +5,18 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 import React, {useEffect} from 'react'
-import {useIntl, FormattedMessage} from 'react-intl'
+// import {useIntl, FormattedMessage} from 'react-intl'
 import {useLocation, useParams} from 'react-router-dom'
 
 // Components
-import {Box, Button, Stack, Link} from '@chakra-ui/react'
+// import {Box, Button, Stack, Link} from '@chakra-ui/react'
 
 // Project Components
 
 // Others
 
 //Hooks
-import useEinstein from '@salesforce/retail-react-app/app/hooks/use-einstein'
+// import useEinstein from '@salesforce/retail-react-app/app/hooks/use-einstein'
 import {useCategory} from '@salesforce/commerce-sdk-react'
 import {useCategoryContext} from '../../context'
 /**
@@ -28,7 +28,7 @@ import {useCategoryContext} from '../../context'
 const Category: React.FC & {
     getTemplateName: () => string
 } = () => {
-    const {pathname} = useLocation()
+    // const {pathname} = useLocation()
     const location = useLocation()
     const urlParams = new URLSearchParams(location.search)
 
@@ -41,7 +41,7 @@ const Category: React.FC & {
     const categoryCtx = useCategoryContext()
     console.log(categoryCtx)
 
-    const {error, data: category} = useCategory(
+    const {data: category} = useCategory(
         {
             parameters: {
                 id: params.categoryId || ''
@@ -51,6 +51,8 @@ const Category: React.FC & {
             enabled: !isSearch && !!params.categoryId
         }
     )
+
+    // console.log(error)
 
     useEffect(() => {
         if (!category) return

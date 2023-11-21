@@ -18,10 +18,10 @@ const AppTemplate: React.FC<{
 }> = (props) => {
     const {children} = props
     const {data: categoriesTree} = useLazyLoadCategories()
-    const rootCategory = flatten(
-        categoriesTree || {},
-        'categories'
-    ) as unknown as Array<CommerceSDK.Category>
+    const rootCategory = flatten(categoriesTree || {}, 'categories') as unknown as Record<
+        string,
+        CommerceSDK.Category
+    >
 
     const entryCategories = rootCategory?.[CAT_MENU_DEFAULT_ROOT_CATEGORY] || null
 

@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@salesforce/retail-react-app": "2.0.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^4.9.5"
@@ -24,18 +25,19 @@
     "compile-translations:pseudo": "node ./node_modules/@salesforce/retail-react-app/scripts/translations/compile-pseudo.js translations/en-US.json",
     "extract-default-translations": "node ./node_modules/@salesforce/retail-react-app/scripts/translations/extract-default-messages.js en-US",
     "format": "pwa-kit-dev format \"**/*.{js,jsx}\"",
-    "lint": "pwa-kit-dev lint \"**/*.{js,jsx}\"",
+    "lint": "pwa-kit-dev lint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "npm run compile-translations && npm run compile-translations:pseudo",
     "push": "npm run build && pwa-kit-dev push",
     "save-credentials": "pwa-kit-dev save-credentials",
-    "start": "cross-env NODE_ICU_DATA=node_modules/full-icu pwa-kit-dev start",
+    "start": "cross-env NODE_ICU_DATA=node_modules/full-icu npm run lint && pwa-kit-dev start",
     "start:inspect": "npm run start -- --inspect",
     "start:pseudolocale": "npm run extract-default-translations && npm run compile-translations:pseudo && cross-env USE_PSEUDOLOCALE=true npm run start",
     "tail-logs": "pwa-kit-dev tail-logs",
     "test": "pwa-kit-dev test",
     "test:lighthouse": "cross-env NODE_ENV=production lhci autorun --config=tests/lighthouserc.js",
-    "test:max-file-size": "npm run build && bundlesize"
+    "test:max-file-size": "npm run build && bundlesize",
+    "gen:dw": "node ./overrides/core/pre-build/gen-dw.mjs"
   },
   "bundlesize": [
     {
@@ -54,6 +56,7 @@
   ],
   "dependencies": {
     "@types/loadable__component": "^5.13.6",
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "dotenv": "^16.3.1"
   }
 }

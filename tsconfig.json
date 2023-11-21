@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmitOnError": true,
     "lib": ["es2020", "DOM"],
     "module": "es2022",
     "resolveJsonModule": true,
