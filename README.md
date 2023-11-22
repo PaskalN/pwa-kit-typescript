@@ -1,9 +1,21 @@
 # PROJECT - SYSTEMA
-## HOW TO START
 Project based on PWA Kit 3.* - TypeScript
+All Hooks defined
+All Utils defined
+Fully extensible
+Eslint and Typescript integrated - add your favourite Eslint style
+Typescript error checker integrated
+_________________________________________________________________
+There are two project folders: app / core
+Core folder contains all legacy definitions and project features - **Do not extend or update the folder**
+App folder extends Core functionality. Develop your project in app folder.
+Enjoy!
 
-1. npm run gen:dw
-2. npm start
+## HOW TO START
+1. npm install
+2. update .env file
+3. npm run gen:dw
+4. npm start
 
 ## ADDITIONAL FOLDERS
 - **overrides/core** - collects all hooks and utils
@@ -14,6 +26,7 @@ Project based on PWA Kit 3.* - TypeScript
 ## ADDITIONAL FILES
 - **config/dw.js** - generated file from npm gen:dw
 - **.env** - configuration env file
+- **webpack.config.js** - PWA Kit webpack config extender
 
 ## FILE CHANGES
 - **overrides/core/pre-build/gen-dw.mjs** - serves to generate dw.js file from .env

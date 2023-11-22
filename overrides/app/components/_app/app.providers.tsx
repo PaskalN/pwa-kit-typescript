@@ -16,7 +16,7 @@ import * as queryKeyHelpers from '@salesforce/commerce-sdk-react/hooks/ShopperPr
 import {useDisclosure} from '@chakra-ui/react'
 
 // Contexts
-import {CategoryProvider, CurrencyProvider} from '../../context'
+import {CurrencyProvider} from '../../context'
 
 // Hooks
 import useMultiSite from '../../hooks/use-multi-site'
@@ -212,9 +212,7 @@ const AppProviders: React.FC<{
             // - "compile-translations:pseudo"
             defaultLocale={DEFAULT_LOCALE}
         >
-            <CurrencyProvider currency={currency}>
-                <CategoryProvider>{children}</CategoryProvider>
-            </CurrencyProvider>
+            <CurrencyProvider currency={currency}>{children}</CurrencyProvider>
         </IntlProvider>
     )
 }

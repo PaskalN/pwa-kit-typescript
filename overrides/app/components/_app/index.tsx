@@ -9,7 +9,7 @@ const App: React.FC<{
 }> = (props) => {
     const {children} = props
     return (
-        <Box layerStyle="page-frame" data-component="frame" paddingTop="10rem">
+        <Box layerStyle="page-frame" data-component="frame">
             <AppProviders>
                 <AppTemplate>{children}</AppTemplate>
             </AppProviders>
