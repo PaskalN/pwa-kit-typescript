@@ -1,9 +1,9 @@
 # node_modules
-node_modules/
+node_modules
 
 # build
-build/
+build
 
 # others
-.vscode/*
+.vscode
 package-lock.json
