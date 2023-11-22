@@ -8,3 +8,4 @@ config/**/*
 node_modules/
 webpack.config.js
 tsconfig.json
+overrides/core/webpack/**/*
