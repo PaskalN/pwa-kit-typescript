@@ -11,6 +11,9 @@ Core folder contains all legacy definitions and project features - **Do not exte
 App folder extends Core functionality. Develop your project in app folder.
 Enjoy!
 
+## REQUIREMENTS
+**Node 18.x**
+
 ## HOW TO START
 1. npm install
 2. update .env file
