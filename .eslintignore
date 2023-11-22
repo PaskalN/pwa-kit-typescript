@@ -1,0 +1,10 @@
+build
+coverage
+docs
+app/overrides/static
+process/**/*
+config/**/*
+/**/node_modules/*
+node_modules/
+webpack.config.js
+tsconfig.json

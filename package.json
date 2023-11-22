@@ -1,0 +1,62 @@
+{
+  "name": "demo-storefront",
+  "version": "0.0.1",
+  "license": "See license in LICENSE",
+  "engines": {
+    "node": "^16.0.0 || ^18.0.0",
+    "npm": "^7.0.0 || ^8.0.0 || ^9.0.0"
+  },
+  "ccExtensibility": {
+    "extends": "@salesforce/retail-react-app",
+    "overridesDir": "overrides"
+  },
+  "devDependencies": {
+    "@salesforce/retail-react-app": "2.0.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "analyze-build": "cross-env MOBIFY_ANALYZE=true npm run build",
+    "build": "npm run build-translations && pwa-kit-dev build",
+    "build-translations": "npm run extract-default-translations && npm run compile-translations",
+    "compile-translations": "node ./node_modules/@salesforce/retail-react-app/scripts/translations/compile-folder.js translations",
+    "compile-translations:pseudo": "node ./node_modules/@salesforce/retail-react-app/scripts/translations/compile-pseudo.js translations/en-US.json",
+    "extract-default-translations": "node ./node_modules/@salesforce/retail-react-app/scripts/translations/extract-default-messages.js en-US",
+    "format": "pwa-kit-dev format \"**/*.{js,jsx}\"",
+    "lint": "pwa-kit-dev lint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "postinstall": "npm run compile-translations && npm run compile-translations:pseudo",
+    "push": "npm run build && pwa-kit-dev push",
+    "save-credentials": "pwa-kit-dev save-credentials",
+    "start": "cross-env NODE_ICU_DATA=node_modules/full-icu npm run lint && pwa-kit-dev start",
+    "start:inspect": "npm run start -- --inspect",
+    "start:pseudolocale": "npm run extract-default-translations && npm run compile-translations:pseudo && cross-env USE_PSEUDOLOCALE=true npm run start",
+    "tail-logs": "pwa-kit-dev tail-logs",
+    "test": "pwa-kit-dev test",
+    "test:lighthouse": "cross-env NODE_ENV=production lhci autorun --config=tests/lighthouserc.js",
+    "test:max-file-size": "npm run build && bundlesize",
+    "gen:dw": "node ./overrides/core/pre-build/gen-dw.mjs"
+  },
+  "bundlesize": [
+    {
+      "path": "build/main.js",
+      "maxSize": "42 kB"
+    },
+    {
+      "path": "build/vendor.js",
+      "maxSize": "320 kB"
+    }
+  ],
+  "browserslist": [
+    "iOS >= 9.0",
+    "Android >= 4.4.4",
+    "last 4 ChromeAndroid versions"
+  ],
+  "dependencies": {
+    "@types/loadable__component": "^5.13.6",
+    "@types/react-router-dom": "^5.3.3",
+    "dotenv": "^16.3.1"
+  }
+}

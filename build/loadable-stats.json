@@ -1,0 +1,327 @@
+{
+  "name": "client",
+  "hash": "5189138d885bc1c00f90",
+  "publicPath": "/mobify/bundle/development/",
+  "outputPath": "/home/n-book/Documents/pwa-kit-typescript/build",
+  "assetsByChunkName": {
+    "main": [
+      "main.js",
+      "main.4f7db7d70fdfbfc49e57.hot-update.js"
+    ],
+    "pages-home": [
+      "pages-home.js"
+    ],
+    "pages-category": [
+      "pages-category.js"
+    ],
+    "vendor": [
+      "vendor.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "vendor.js",
+      "size": 5306100,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "vendor.js.map"
+        }
+      },
+      "chunkNames": [
+        "vendor"
+      ],
+      "chunkIdHints": [
+        "vendor"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "vendor"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.js",
+      "size": 530905,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "main.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b.js",
+      "size": 231530,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b.js.map"
+        }
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-home.js",
+      "size": 84450,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "pages-home.js.map"
+        }
+      },
+      "chunkNames": [
+        "pages-home"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "pages-home"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.4f7db7d70fdfbfc49e57.hot-update.js",
+      "size": 7149,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4f7db7d70fdfbfc49e57",
+        "related": {
+          "sourceMap": "main.4f7db7d70fdfbfc49e57.hot-update.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-category.js",
+      "size": 5093,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "pages-category.js.map"
+        }
+      },
+      "chunkNames": [
+        "pages-category"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "pages-category"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "_1242.js",
+      "size": 284,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "_1242.js.map"
+        }
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "_1242"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.4f7db7d70fdfbfc49e57.hot-update.json",
+      "size": 28,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "4f7db7d70fdfbfc49e57"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        "vendor",
+        "main"
+      ],
+      "assets": [
+        {
+          "name": "vendor.js"
+        },
+        {
+          "name": "main.js"
+        },
+        {
+          "name": "main.4f7db7d70fdfbfc49e57.hot-update.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 3,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-home": {
+      "name": "pages-home",
+      "chunks": [
+        "vendor",
+        "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b",
+        "pages-home"
+      ],
+      "assets": [
+        {
+          "name": "vendor.js"
+        },
+        {
+          "name": "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b.js"
+        },
+        {
+          "name": "pages-home.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 3,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-category": {
+      "name": "pages-category",
+      "chunks": [
+        "pages-category"
+      ],
+      "assets": [
+        {
+          "name": "pages-category.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "main",
+      "files": [
+        "main.js",
+        "main.4f7db7d70fdfbfc49e57.hot-update.js"
+      ]
+    },
+    {
+      "id": "_1242",
+      "files": [
+        "_1242.js"
+      ]
+    },
+    {
+      "id": "pages-home",
+      "files": [
+        "pages-home.js"
+      ]
+    },
+    {
+      "id": "pages-category",
+      "files": [
+        "pages-category.js"
+      ]
+    },
+    {
+      "id": "vendor",
+      "files": [
+        "vendor.js"
+      ]
+    },
+    {
+      "id": "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b",
+      "files": [
+        "vendors-node_modules_salesforce_retail-react-app_app_components_hero_index_jsx-node_modules_s-21fa6b.js"
+      ]
+    }
+  ]
+}
