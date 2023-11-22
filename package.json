@@ -11,7 +11,7 @@
     "overridesDir": "overrides"
   },
   "devDependencies": {
-    "@salesforce/retail-react-app": "2.0.0",
+    "@salesforce/retail-react-app": "2.1.1",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
@@ -36,7 +36,6 @@
     "tail-logs": "pwa-kit-dev tail-logs",
     "test": "pwa-kit-dev test",
     "test:lighthouse": "cross-env NODE_ENV=production lhci autorun --config=tests/lighthouserc.js",
-    "test:max-file-size": "npm run build && bundlesize",
     "gen:dw": "node ./overrides/core/pre-build/gen-dw.mjs"
   },
   "bundlesize": [

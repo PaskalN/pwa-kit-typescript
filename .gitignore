@@ -6,3 +6,4 @@ build/
 
 # others
 .vscode/*
+package-lock.json
