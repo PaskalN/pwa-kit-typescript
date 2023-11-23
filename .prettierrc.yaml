@@ -5,3 +5,5 @@ bracketSpacing: false
 tabWidth: 4
 arrowParens: 'always'
 trailingComma: 'none'
+endOfLine: 'auto'
+insertSpaceBeforeFunctionParenthesis: false
