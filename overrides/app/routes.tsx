@@ -25,11 +25,17 @@ const fallback = <Skeleton height="75vh" width="100%" />
 
 // Pages
 const Home = loadable(() => import('./pages/home'), {fallback})
+const Sample = loadable(() => import('./pages/sample'), {fallback})
 
 export const routes: Array<RouteProps> = [
     {
         path: '/',
         component: Home,
+        exact: true
+    },
+    {
+        path: '/sample',
+        component: Sample,
         exact: true
     }
 ]

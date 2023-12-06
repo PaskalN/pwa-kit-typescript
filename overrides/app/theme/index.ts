@@ -13,6 +13,7 @@ import Text from './components/base/text'
 import Heading from './components/base/heading'
 
 // Project Component
+import SimpleCard from './components/project/simple-card'
 
 const themeExt = {
     /**
@@ -37,7 +38,10 @@ const themeExt = {
         // Base
         Text,
 
-        Heading
+        Heading,
+
+        // Project
+        SimpleCard
     }
 }
 
