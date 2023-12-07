@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "hash": "f00e255703ed499afd60",
+  "hash": "e9fbfdd106b9806b6a1b",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/home/n-book/Documents/pwa-kit-typescript/build",
   "assetsByChunkName": {
@@ -21,7 +21,7 @@
     {
       "type": "asset",
       "name": "vendor.js",
-      "size": 5219870,
+      "size": 5221898,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -48,7 +48,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 538884,
+      "size": 587950,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -73,7 +73,7 @@
     {
       "type": "asset",
       "name": "pages-home.js",
-      "size": 47097,
+      "size": 47443,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,

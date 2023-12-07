@@ -29,6 +29,14 @@ const Home: React.FC & {
     const testField = preferenceUtil.get<number>('testField')
     const customerServiceEmail = preferenceUtil.get<string>('customerServiceEmail')
 
+    // Another way of usage
+    // const preferences =
+    //     preferenceUtil.getPreferences<SitePreferencesApp.Page<SitePreferencesApp.Home>>()
+
+    // const countryCode = preferences.countryCode
+    // const testField = preferences.testField
+    // const customerServiceEmail = preferences.customerServiceEmail
+
     const styles = {
         container: {
             display: 'flex',
