@@ -1243,72 +1243,6 @@
       "value": "Save"
     }
   ],
-  "form_input_account_create_title": [
-    {
-      "type": 0,
-      "value": "Create an account"
-    }
-  ],
-  "form_input_email_error_message": [
-    {
-      "type": 0,
-      "value": "Invalid email address"
-    }
-  ],
-  "form_input_email_label": [
-    {
-      "type": 0,
-      "value": "Email Address"
-    }
-  ],
-  "form_input_email_placeholder": [
-    {
-      "type": 0,
-      "value": "Enter your email"
-    }
-  ],
-  "form_input_email_require_message": [
-    {
-      "type": 0,
-      "value": "Email is required"
-    }
-  ],
-  "form_input_gender_label": [
-    {
-      "type": 0,
-      "value": "Gender"
-    }
-  ],
-  "form_input_gender_placeholder": [
-    {
-      "type": 0,
-      "value": "Select your gender"
-    }
-  ],
-  "form_input_login_title": [
-    {
-      "type": 0,
-      "value": "Login"
-    }
-  ],
-  "form_input_password_label": [
-    {
-      "type": 0,
-      "value": "Password"
-    }
-  ],
-  "form_input_password_placeholder": [
-    {
-      "type": 0,
-      "value": "Enter your password"
-    }
-  ],
-  "form_input_password_require_message": [
-    {
-      "type": 0,
-      "value": "Password is required"
-    }
-  ],
   "global.account.link.account_details": [
     {
       "type": 0,
@@ -1633,12 +1567,6 @@
     {
       "type": 0,
       "value": "Please select all your options above"
-    }
-  ],
-  "label_forgot_password": [
-    {
-      "type": 0,
-      "value": "Forgot password?"
     }
   ],
   "locale_text.message.ar-SA": [
@@ -1993,36 +1921,6 @@
     {
       "type": 0,
       "value": "Incorrect username or password, please try again."
-    }
-  ],
-  "login_page_form_description": [
-    {
-      "type": 0,
-      "value": "If you are a registered user, please enter your email and password."
-    }
-  ],
-  "login_page_form_title": [
-    {
-      "type": 0,
-      "value": "Already registered?"
-    }
-  ],
-  "login_page_no_account_description": [
-    {
-      "type": 0,
-      "value": "Creating an account is easy. Just fill in the form below and enjoy the benefits of having an account."
-    }
-  ],
-  "login_page_no_account_title": [
-    {
-      "type": 0,
-      "value": "Don't have an account?"
-    }
-  ],
-  "login_page_title": [
-    {
-      "type": 0,
-      "value": "My account login"
     }
   ],
   "offline_banner.description.browsing_offline_mode": [
@@ -2719,6 +2617,240 @@
     {
       "type": 0,
       "value": "Are you sure you want to sign out? You will need to sign back in to proceed with your current order."
+    }
+  ],
+  "sys_create_account_page_form_description": [
+    {
+      "type": 0,
+      "value": "Creating an account is fast and easy. Please fill in the following fields."
+    }
+  ],
+  "sys_form_input_account_create_title": [
+    {
+      "type": 0,
+      "value": "Create an account"
+    }
+  ],
+  "sys_form_input_confirm_password_label": [
+    {
+      "type": 0,
+      "value": "Confirm Password"
+    }
+  ],
+  "sys_form_input_confirm_password_placeholder": [
+    {
+      "type": 0,
+      "value": "Confirm Password"
+    }
+  ],
+  "sys_form_input_email_error_message": [
+    {
+      "type": 0,
+      "value": "Invalid email address"
+    }
+  ],
+  "sys_form_input_email_label": [
+    {
+      "type": 0,
+      "value": "Email Address"
+    }
+  ],
+  "sys_form_input_email_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your email"
+    }
+  ],
+  "sys_form_input_email_require_message": [
+    {
+      "type": 0,
+      "value": "Email is required"
+    }
+  ],
+  "sys_form_input_first_name_label": [
+    {
+      "type": 0,
+      "value": "First Name"
+    }
+  ],
+  "sys_form_input_first_name_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your Name"
+    }
+  ],
+  "sys_form_input_first_name_require_message": [
+    {
+      "type": 0,
+      "value": "First Name is required"
+    }
+  ],
+  "sys_form_input_gender_label": [
+    {
+      "type": 0,
+      "value": "Gender"
+    }
+  ],
+  "sys_form_input_gender_placeholder": [
+    {
+      "type": 0,
+      "value": "Select your gender"
+    }
+  ],
+  "sys_form_input_last_name_label": [
+    {
+      "type": 0,
+      "value": "Last Name"
+    }
+  ],
+  "sys_form_input_last_name_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your Last Name"
+    }
+  ],
+  "sys_form_input_last_name_require_message": [
+    {
+      "type": 0,
+      "value": "Last Name is required"
+    }
+  ],
+  "sys_form_input_login_title": [
+    {
+      "type": 0,
+      "value": "Login"
+    }
+  ],
+  "sys_form_input_password_label": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "sys_form_input_password_notmatch_message": [
+    {
+      "type": 0,
+      "value": "Passwords does not match"
+    }
+  ],
+  "sys_form_input_password_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your password"
+    }
+  ],
+  "sys_form_input_password_require_message": [
+    {
+      "type": 0,
+      "value": "Password is required"
+    }
+  ],
+  "sys_form_input_reset_password_description": [
+    {
+      "type": 0,
+      "value": "Enter your email to receive instructions on how to reset your password"
+    }
+  ],
+  "sys_form_input_reset_password_title": [
+    {
+      "type": 0,
+      "value": "Reset Password"
+    }
+  ],
+  "sys_form_input_select_require": [
+    {
+      "type": 0,
+      "value": "Please choose an option"
+    }
+  ],
+  "sys_form_options_female": [
+    {
+      "type": 0,
+      "value": "Female"
+    }
+  ],
+  "sys_form_options_lowercase": [
+    {
+      "type": 0,
+      "value": "1 lowercase letter"
+    }
+  ],
+  "sys_form_options_male": [
+    {
+      "type": 0,
+      "value": "Male"
+    }
+  ],
+  "sys_form_options_number": [
+    {
+      "type": 0,
+      "value": "1 number"
+    }
+  ],
+  "sys_form_options_other": [
+    {
+      "type": 0,
+      "value": "Prefer not to say"
+    }
+  ],
+  "sys_form_options_seven_char": [
+    {
+      "type": 0,
+      "value": "7 characters minimum"
+    }
+  ],
+  "sys_form_options_special_char": [
+    {
+      "type": 0,
+      "value": "1 special character (example: , S ! % #)"
+    }
+  ],
+  "sys_form_options_uppercase": [
+    {
+      "type": 0,
+      "value": "1 uppercase letter"
+    }
+  ],
+  "sys_label_create_account": [
+    {
+      "type": 0,
+      "value": "Create an account"
+    }
+  ],
+  "sys_label_forgot_password": [
+    {
+      "type": 0,
+      "value": "Forgot password?"
+    }
+  ],
+  "sys_login_page_form_description": [
+    {
+      "type": 0,
+      "value": "If you are a registered user, please enter your email and password."
+    }
+  ],
+  "sys_login_page_form_title": [
+    {
+      "type": 0,
+      "value": "Already registered?"
+    }
+  ],
+  "sys_login_page_no_account_description": [
+    {
+      "type": 0,
+      "value": "Creating an account is easy. Just fill in the form below and enjoy the benefits of having an account."
+    }
+  ],
+  "sys_login_page_no_account_title": [
+    {
+      "type": 0,
+      "value": "Don't have an account?"
+    }
+  ],
+  "sys_login_page_title": [
+    {
+      "type": 0,
+      "value": "My account login"
     }
   ],
   "toggle_card.action.edit": [

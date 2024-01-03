@@ -1,12 +1,11 @@
 {
   "name": "client",
-  "hash": "91ec872e6965eb9fde84",
+  "hash": "426fce3753affc95ff30",
   "publicPath": "/mobify/bundle/development/",
   "outputPath": "/home/n-workstation/Documents/MyProjects/pwa-kit-typescript/build",
   "assetsByChunkName": {
     "main": [
-      "main.js",
-      "main.95b90197ed5188986047.hot-update.js"
+      "main.js"
     ],
     "pages-home": [
       "pages-home.js"
@@ -31,7 +30,7 @@
     {
       "type": "asset",
       "name": "vendor.js",
-      "size": 5410178,
+      "size": 5347854,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -58,7 +57,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 700721,
+      "size": 703567,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -156,7 +155,7 @@
     {
       "type": "asset",
       "name": "pages-registration.js",
-      "size": 45268,
+      "size": 45269,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -230,33 +229,6 @@
     },
     {
       "type": "asset",
-      "name": "main.95b90197ed5188986047.hot-update.js",
-      "size": 4464,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true,
-        "fullhash": "95b90197ed5188986047",
-        "related": {
-          "sourceMap": "main.95b90197ed5188986047.hot-update.js.map"
-        }
-      },
-      "chunkNames": [
-        "main"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 1,
-      "chunks": [
-        "main"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
       "name": "_1242.js",
       "size": 284,
       "emitted": false,
@@ -277,25 +249,6 @@
         "_1242"
       ],
       "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "main.95b90197ed5188986047.hot-update.json",
-      "size": 28,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true,
-        "fullhash": "95b90197ed5188986047"
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [],
-      "auxiliaryChunks": []
     }
   ],
   "namedChunkGroups": {
@@ -311,14 +264,11 @@
         },
         {
           "name": "main.js"
-        },
-        {
-          "name": "main.95b90197ed5188986047.hot-update.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 3,
+      "filteredAuxiliaryAssets": 2,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -430,8 +380,7 @@
     {
       "id": "main",
       "files": [
-        "main.js",
-        "main.95b90197ed5188986047.hot-update.js"
+        "main.js"
       ]
     },
     {
