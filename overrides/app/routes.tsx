@@ -20,16 +20,41 @@ import {RouteProps} from 'react-router-dom'
 // Components
 import {configureRoutes} from '@salesforce/retail-react-app/app/utils/routes-utils'
 import {Skeleton} from '@chakra-ui/react'
+import {_ROUTERS} from './constants'
 
 const fallback = <Skeleton height="75vh" width="100%" />
 
 // Pages
 const Home = loadable(() => import('./pages/home'), {fallback})
+const Login = loadable(() => import('./pages/login'), {fallback})
+const Sample = loadable(() => import('./pages/sample'), {fallback})
+const Registration = loadable(() => import('./pages/registration'), {fallback})
+const Account = loadable(() => import('./pages/account'), {fallback})
 
 export const routes: Array<RouteProps> = [
     {
         path: '/',
         component: Home,
+        exact: true
+    },
+    {
+        path: _ROUTERS.LOGIN,
+        component: Login,
+        exact: true
+    },
+    {
+        path: _ROUTERS.REGISTRATION,
+        component: Registration,
+        exact: true
+    },
+    {
+        path: _ROUTERS.ACCOUNT,
+        component: Account,
+        exact: true
+    },
+    {
+        path: '/sample',
+        component: Sample,
         exact: true
     }
 ]

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Fonts} from '../base/fonts'
+import {Fonts} from '../project/fonts'
 
 const ConfigTemplateExtension: React.FC<{
     configProps: PWAKitAppConfig.ComponentProps
