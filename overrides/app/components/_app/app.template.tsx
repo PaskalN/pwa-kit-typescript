@@ -5,6 +5,8 @@ import {Flex} from '@chakra-ui/react'
 import Header from '../project/header'
 import MainNavigation from '../project/main-navigation'
 import UseAcrionBar from '../ecommerce/user-action-bar'
+import TopBannerCarousel from '../project/carousels/top-banner-carousel'
+import SearchForm from '../ecommerce/search-form'
 
 // Providers
 import SystemaProviders from '../../../core/components/systema/systema-providers'
@@ -21,7 +23,7 @@ const AppTemplate: React.FC<{
 }> = (props) => {
     const {children} = props
 
-    const GLOBAL_SLOTS = ['footer-column-m', 'best-man']
+    const GLOBAL_SLOTS = ['header-top-banner', 'footer-column-m', 'best-man']
 
     const {data: categoriesTree} = useLazyLoadCategories()
     const rootCategory = flatten(categoriesTree || {}, 'categories') as unknown as Record<
@@ -41,12 +43,18 @@ const AppTemplate: React.FC<{
                 left="0"
                 right="0"
             >
+                <TopBannerCarousel />
                 <Flex position="relative" w="100%" h="100%" bg="white" boxShadow="12">
                     <Flex layerStyle="page-section" padding="0">
                         <Flex layerStyle="page-segment" py="0" flexDir="row" gap="1rem">
                             {/* <Logo /> */}
                             <MainNavigation entry={entryCategories} />
-                            <UseAcrionBar />
+                            <Flex gap="0.25rem">
+                                <Flex w="100%" minW="350px">
+                                    <SearchForm />
+                                </Flex>
+                                <UseAcrionBar />
+                            </Flex>
                         </Flex>
                     </Flex>
                 </Flex>

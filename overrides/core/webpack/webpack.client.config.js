@@ -21,6 +21,7 @@ const webpackClientConfig = () => {
 
     // REASIGN PLUGINS
     CONFIG.plugins = PLUGINS
+    
     return CONFIG
 }
 

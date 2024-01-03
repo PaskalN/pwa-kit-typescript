@@ -9,9 +9,18 @@ const Header: React.FC<
     const {children, ...rest} = props
 
     return (
-        <Flex as="header" position="relative" data-component="header" w="100%" {...rest}>
-            {children}
-        </Flex>
+        <>
+            <Flex
+                as="header"
+                position="relative"
+                data-component="header"
+                w="100%"
+                {...rest}
+                flexDir="column"
+            >
+                {children}
+            </Flex>
+        </>
     )
 }
 

@@ -14,8 +14,7 @@
     "@salesforce/retail-react-app": "2.1.1",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^4.9.5"
+    "tsconfig-paths": "^4.2.0"
   },
   "scripts": {
     "analyze-build": "cross-env MOBIFY_ANALYZE=true npm run build",
@@ -54,8 +53,15 @@
     "last 4 ChromeAndroid versions"
   ],
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@types/loadable__component": "^5.13.6",
     "@types/react-router-dom": "^5.3.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "embla-carousel-autoplay": "^8.0.0-rc15",
+    "embla-carousel-class-names": "^8.0.0-rc15",
+    "embla-carousel-react": "^8.0.0-rc15",
+    "framer-motion": "^10.16.16"
   }
 }

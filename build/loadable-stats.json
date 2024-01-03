@@ -1,17 +1,27 @@
 {
   "name": "client",
-  "hash": "e9fbfdd106b9806b6a1b",
+  "hash": "21ee07e9c046268a432a",
   "publicPath": "/mobify/bundle/development/",
-  "outputPath": "/home/n-book/Documents/pwa-kit-typescript/build",
+  "outputPath": "/home/n-workstation/Documents/MyProjects/pwa-kit-typescript/build",
   "assetsByChunkName": {
     "main": [
-      "main.js"
+      "main.js",
+      "main.16aa4603e614d2ef4e22.hot-update.js"
     ],
     "pages-home": [
       "pages-home.js"
     ],
+    "pages-login": [
+      "pages-login.js"
+    ],
     "pages-sample": [
       "pages-sample.js"
+    ],
+    "pages-registration": [
+      "pages-registration.js"
+    ],
+    "pages-account": [
+      "pages-account.js"
     ],
     "vendor": [
       "vendor.js"
@@ -21,7 +31,7 @@
     {
       "type": "asset",
       "name": "vendor.js",
-      "size": 5221898,
+      "size": 5410178,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -48,7 +58,7 @@
     {
       "type": "asset",
       "name": "main.js",
-      "size": 587950,
+      "size": 701496,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -72,8 +82,31 @@
     },
     {
       "type": "asset",
+      "name": "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939.js",
+      "size": 66222,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939.js.map"
+        }
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
       "name": "pages-home.js",
-      "size": 47443,
+      "size": 59660,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -97,31 +130,58 @@
     },
     {
       "type": "asset",
-      "name": "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8.js",
-      "size": 25667,
+      "name": "pages-login.js",
+      "size": 46685,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
         "javascriptModule": false,
         "related": {
-          "sourceMap": "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8.js.map"
+          "sourceMap": "pages-login.js.map"
         }
       },
-      "chunkNames": [],
+      "chunkNames": [
+        "pages-login"
+      ],
       "chunkIdHints": [],
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "filteredRelated": 1,
       "chunks": [
-        "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8"
+        "pages-login"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-registration.js",
+      "size": 45268,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "pages-registration.js.map"
+        }
+      },
+      "chunkNames": [
+        "pages-registration"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "pages-registration"
       ],
       "auxiliaryChunks": []
     },
     {
       "type": "asset",
       "name": "pages-sample.js",
-      "size": 8066,
+      "size": 20283,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -140,6 +200,58 @@
       "filteredRelated": 1,
       "chunks": [
         "pages-sample"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.16aa4603e614d2ef4e22.hot-update.js",
+      "size": 7621,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "16aa4603e614d2ef4e22",
+        "related": {
+          "sourceMap": "main.16aa4603e614d2ef4e22.hot-update.js.map"
+        }
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-account.js",
+      "size": 6070,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "pages-account.js.map"
+        }
+      },
+      "chunkNames": [
+        "pages-account"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
+      "chunks": [
+        "pages-account"
       ],
       "auxiliaryChunks": []
     },
@@ -165,6 +277,25 @@
         "_1242"
       ],
       "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "main.16aa4603e614d2ef4e22.hot-update.json",
+      "size": 28,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true,
+        "fullhash": "16aa4603e614d2ef4e22"
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [],
+      "auxiliaryChunks": []
     }
   ],
   "namedChunkGroups": {
@@ -180,11 +311,14 @@
         },
         {
           "name": "main.js"
+        },
+        {
+          "name": "main.16aa4603e614d2ef4e22.hot-update.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 3,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -192,20 +326,41 @@
     "pages-home": {
       "name": "pages-home",
       "chunks": [
-        "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8",
         "pages-home"
       ],
       "assets": [
-        {
-          "name": "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8.js"
-        },
         {
           "name": "pages-home.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-login": {
+      "name": "pages-login",
+      "chunks": [
+        "vendor",
+        "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939",
+        "pages-login"
+      ],
+      "assets": [
+        {
+          "name": "vendor.js"
+        },
+        {
+          "name": "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939.js"
+        },
+        {
+          "name": "pages-login.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 3,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -213,20 +368,58 @@
     "pages-sample": {
       "name": "pages-sample",
       "chunks": [
-        "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8",
         "pages-sample"
       ],
       "assets": [
-        {
-          "name": "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8.js"
-        },
         {
           "name": "pages-sample.js"
         }
       ],
       "filteredAssets": 0,
       "assetsSize": null,
-      "filteredAuxiliaryAssets": 2,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-registration": {
+      "name": "pages-registration",
+      "chunks": [
+        "vendor",
+        "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939",
+        "pages-registration"
+      ],
+      "assets": [
+        {
+          "name": "vendor.js"
+        },
+        {
+          "name": "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939.js"
+        },
+        {
+          "name": "pages-registration.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 3,
+      "auxiliaryAssetsSize": null,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-account": {
+      "name": "pages-account",
+      "chunks": [
+        "pages-account"
+      ],
+      "assets": [
+        {
+          "name": "pages-account.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 1,
       "auxiliaryAssetsSize": null,
       "children": {},
       "childAssets": {}
@@ -237,7 +430,8 @@
     {
       "id": "main",
       "files": [
-        "main.js"
+        "main.js",
+        "main.16aa4603e614d2ef4e22.hot-update.js"
       ]
     },
     {
@@ -253,9 +447,27 @@
       ]
     },
     {
+      "id": "pages-login",
+      "files": [
+        "pages-login.js"
+      ]
+    },
+    {
       "id": "pages-sample",
       "files": [
         "pages-sample.js"
+      ]
+    },
+    {
+      "id": "pages-registration",
+      "files": [
+        "pages-registration.js"
+      ]
+    },
+    {
+      "id": "pages-account",
+      "files": [
+        "pages-account.js"
       ]
     },
     {
@@ -265,9 +477,9 @@
       ]
     },
     {
-      "id": "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8",
+      "id": "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939",
       "files": [
-        "overrides_app_components_ecommerce_slot-templates_slot-base_tsx-overrides_core_components_eco-2bb4f8.js"
+        "overrides_app_components_project_fields_input_password_tsx-overrides_app_components_project_s-3a0939.js"
       ]
     }
   ]

@@ -1,6 +1,6 @@
-import {ThemeObject, ThemeVariantProps} from '../../theme.interfaces'
-import {getColorScheme} from '../../themeTools'
+import {ThemeObject} from '../../theme.interfaces'
 import TextSizes from '../../presets/text.sizes'
+import getTextVariants from '../../presets/text.variants'
 
 const colorScheme: ThemeObject = {
     nav_item: {
@@ -24,53 +24,32 @@ const colorScheme: ThemeObject = {
         _active: {
             color: 'carminepink.90'
         }
+    },
+    link: {
+        color: 'blue.20',
+
+        _hover: {
+            color: 'blue.30'
+        },
+
+        _active: {
+            color: 'blue.40'
+        }
     }
 }
+
+const textVariants = getTextVariants(colorScheme)
 
 export default {
     baseStyle: {
         lineHeight: '1',
-        fontFamily: 'OpenSansRegular',
-        letterSpacing: '0.0625rem',
+        fontFamily: 'Roboto',
         color: 'dark',
+        fontWeight: 'normal',
         transition: '0.3s'
     },
     variants: {
-        default: (props: ThemeVariantProps): ThemeObject => {
-            const scheme = getColorScheme(props.colorScheme, colorScheme)
-            return {
-                ...scheme
-            }
-        },
-        light: (props: ThemeVariantProps): ThemeObject => {
-            const scheme = getColorScheme(props.colorScheme, colorScheme)
-            return {
-                ...scheme,
-                fontFamily: 'OpenSansLight'
-            }
-        },
-        medium: (props: ThemeVariantProps): ThemeObject => {
-            const scheme = getColorScheme(props.colorScheme, colorScheme)
-            return {
-                ...scheme,
-                fontFamily: 'OpenSansMedium',
-                fontWeight: 'bold'
-            }
-        },
-        heavy: (props: ThemeVariantProps): ThemeObject => {
-            const scheme = getColorScheme(props.colorScheme, colorScheme)
-            return {
-                ...scheme,
-                fontFamily: 'OpenSansSemiBold'
-            }
-        },
-        heavy_xl: (props: ThemeVariantProps): ThemeObject => {
-            const scheme = getColorScheme(props.colorScheme, colorScheme)
-            return {
-                ...scheme,
-                fontFamily: 'OpenSansExtraBold'
-            }
-        }
+        ...textVariants
     },
     sizes: {
         ...TextSizes

@@ -1,7 +1,28 @@
 import {ThemeObject, ThemeVariantProps} from '../../theme.interfaces'
 import {getColorScheme} from '../../themeTools'
 
-const colorScheme: ThemeObject = {}
+const colorScheme: ThemeObject = {
+    light: {
+        bg: 'rgba(255, 255, 255, 0)',
+        _hover: {
+            bg: 'rgba(255, 255, 255, 0.15)'
+        }
+    },
+
+    login: {
+        bg: 'blue.30',
+        _hover: {
+            bg: 'blue.40'
+        },
+        _active: {
+            bg: 'blue.50'
+        },
+        _disabled: {
+            bg: 'blue.50',
+            opacity: '0.8'
+        }
+    }
+}
 
 export default {
     baseStyle: {},
@@ -9,6 +30,10 @@ export default {
         default: (props: ThemeVariantProps): ThemeObject => {
             const scheme = getColorScheme(props.colorScheme, colorScheme)
             return {
+                p: '0.85rem',
+                borderRadius: 'iconButton',
+                transition: '0.3s',
+
                 ...scheme
             }
         },
@@ -24,7 +49,8 @@ export default {
                 },
 
                 _disabled: {
-                    bg: 'red'
+                    opacity: 0.5,
+                    bg: 'rgba(0, 0, 0, 0.15)'
                 },
 
                 ...scheme
@@ -32,7 +58,7 @@ export default {
         }
     },
     sizes: {
-        sm: {
+        icon_sm: {
             w: '2.25rem',
             h: '2.25rem'
         }

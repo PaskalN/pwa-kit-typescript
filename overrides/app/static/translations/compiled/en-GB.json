@@ -1243,6 +1243,72 @@
       "value": "Save"
     }
   ],
+  "form_input_account_create_title": [
+    {
+      "type": 0,
+      "value": "Create an account"
+    }
+  ],
+  "form_input_email_error_message": [
+    {
+      "type": 0,
+      "value": "Invalid email address"
+    }
+  ],
+  "form_input_email_label": [
+    {
+      "type": 0,
+      "value": "Email Address"
+    }
+  ],
+  "form_input_email_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your email"
+    }
+  ],
+  "form_input_email_require_message": [
+    {
+      "type": 0,
+      "value": "Email is required"
+    }
+  ],
+  "form_input_gender_label": [
+    {
+      "type": 0,
+      "value": "Gender"
+    }
+  ],
+  "form_input_gender_placeholder": [
+    {
+      "type": 0,
+      "value": "Select your gender"
+    }
+  ],
+  "form_input_login_title": [
+    {
+      "type": 0,
+      "value": "Login"
+    }
+  ],
+  "form_input_password_label": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "form_input_password_placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your password"
+    }
+  ],
+  "form_input_password_require_message": [
+    {
+      "type": 0,
+      "value": "Password is required"
+    }
+  ],
   "global.account.link.account_details": [
     {
       "type": 0,
@@ -1567,6 +1633,12 @@
     {
       "type": 0,
       "value": "Please select all your options above"
+    }
+  ],
+  "label_forgot_password": [
+    {
+      "type": 0,
+      "value": "Forgot password?"
     }
   ],
   "locale_text.message.ar-SA": [
@@ -1921,6 +1993,36 @@
     {
       "type": 0,
       "value": "Incorrect username or password, please try again."
+    }
+  ],
+  "login_page_form_description": [
+    {
+      "type": 0,
+      "value": "If you are a registered user, please enter your email and password."
+    }
+  ],
+  "login_page_form_title": [
+    {
+      "type": 0,
+      "value": "Already registered?"
+    }
+  ],
+  "login_page_no_account_description": [
+    {
+      "type": 0,
+      "value": "Creating an account is easy. Just fill in the form below and enjoy the benefits of having an account."
+    }
+  ],
+  "login_page_no_account_title": [
+    {
+      "type": 0,
+      "value": "Don't have an account?"
+    }
+  ],
+  "login_page_title": [
+    {
+      "type": 0,
+      "value": "My account login"
     }
   ],
   "offline_banner.description.browsing_offline_mode": [

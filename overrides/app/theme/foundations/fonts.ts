@@ -30,19 +30,5 @@ export default {
     OpenSansExtraBoldItalic: 'OpenSansExtraBoldItalic',
     OpenSansCondensedMediumItalic: 'OpenSansCondensedMediumItalic',
 
-    VisbyCFLightItalic: 'VisbyCFLightItalic',
-    VisbyCFRegular: 'VisbyCFRegular',
-    VisbyCFMediumItalic: 'VisbyCFMediumItalic',
-    VisbyCFMediumRegular: 'VisbyCFMediumRegular',
-    VisbyCFItalic: 'VisbyCFItalic',
-    VisbyCFExtraBoldRegular: 'VisbyCFExtraBoldRegular',
-    VisbyCFHeavyItalic: 'VisbyCFHeavyItalic',
-    VisbyCFHeavyRegular: 'VisbyCFHeavyRegular',
-    VisbyCFThinRegular: 'VisbyCFThinRegular',
-    VisbyCFLightRegular: 'VisbyCFLightRegular',
-    VisbyCFThinItalic: 'VisbyCFThinItalic',
-    VisbyCFExtraBoldItalic: 'VisbyCFExtraBoldItalic',
-    VisbyCFDemiBoldItalic: 'VisbyCFDemiBoldItalic',
-    VisbyCFDemiBoldRegular: 'VisbyCFDemiBoldRegular',
-    VisbyCFBoldItalic: 'VisbyCFBoldItalic'
+    Roboto: 'Roboto'
 }

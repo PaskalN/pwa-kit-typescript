@@ -25,6 +25,15 @@ export default {
                 ...scheme,
                 boxShadow: '12'
             }
+        },
+        error: (props: ThemeVariantProps): ThemeObject => {
+            const scheme = getColorScheme(props.colorScheme, colorScheme)
+            return {
+                color: 'carminepink.100',
+                border: '1px solid',
+                borderColor: 'carminepink.100',
+                ...scheme
+            }
         }
     },
     sizes: {

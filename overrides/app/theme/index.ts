@@ -13,9 +13,14 @@ import radii from './foundations/radius'
 import Text from './components/base/text'
 import Heading from './components/base/heading'
 import Button from './components/base/button'
+import Input from './components/base/input'
+import Select from './components/base/select'
+import Modal from './components/base/modal'
 
 // Project Component
 import SimpleCard from './components/project/simple-card'
+import Embla from './components/project/embla'
+import Field from './components/project/field'
 
 const themeExt = {
     /**
@@ -46,8 +51,18 @@ const themeExt = {
 
         Button,
 
+        Input,
+
+        Select,
+
+        Modal,
+
         // Project
-        SimpleCard
+        SimpleCard,
+
+        Embla,
+
+        Field
     }
 }
 
