@@ -10,8 +10,8 @@ import MiniSeachResults from '../mini-search-results'
 import {useSearchSuggestions} from '@salesforce/commerce-sdk-react'
 
 // Others
-import {RECENT_SEARCH_MIN_LENGTH, RECENT_SEARCH_KEY} from '../../../constants'
-import {formatSuggestions} from '../../../../core/utils/search.utils'
+import {RECENT_SEARCH_MIN_LENGTH} from '../../../constants'
+import {formatSuggestions} from '../../../../core/utils/search-utils'
 
 const SearchForm: React.FC = () => {
     // Hooks

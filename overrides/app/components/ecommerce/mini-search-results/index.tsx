@@ -8,8 +8,7 @@ import {useProducts} from '@salesforce/commerce-sdk-react'
 import useMultiSite from '../../../hooks/use-multi-site'
 
 // Others
-import {SearchSuggestions} from '../../../../core/utils/search.utils'
-import {formatSuggestions} from '../../../../core/utils/search.utils'
+import {formatSuggestions} from '../../../../core/utils/search-utils'
 
 type Results = ReturnType<typeof formatSuggestions>
 
