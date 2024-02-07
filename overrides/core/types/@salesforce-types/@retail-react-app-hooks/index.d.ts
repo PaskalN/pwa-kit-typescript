@@ -114,7 +114,9 @@ declare module '@salesforce/retail-react-app/app/hooks/use-variant' {
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-currency' {
-    export const useCurrency: () => [string, React.Dispatch<React.SetStateAction<string>>] | never
+    export const useCurrency: () =>
+        | {currency: string; setCurrency: React.Dispatch<React.SetStateAction<string>>}
+        | never
 }
 
 declare module '@salesforce/retail-react-app/app/hooks/use-toast' {

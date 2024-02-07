@@ -175,6 +175,11 @@ declare module '@salesforce/retail-react-app/app/utils/product-utils' {
         _variationAttributes: Array<CommerceSDK.VariationAttribute>,
         _values: Record<string, string>
     ): Record<string, string>
+
+    export function getDisplayPrice(product: CommerceSDK.Product$0): {
+        basePrice: number | undefined
+        discountPrice: number | null
+    }
 }
 
 declare module '@salesforce/retail-react-app/app/utils/responsive-image' {

@@ -17,7 +17,9 @@ const webpackClientConfig = () => {
     })
 
     // ADD NEW PLUGINS
-    PLUGINS.push(new ForkTsCheckerWebpackPlugin())
+    PLUGINS.push(new ForkTsCheckerWebpackPlugin({
+        async: false
+    }))
 
     // REASIGN PLUGINS
     CONFIG.plugins = PLUGINS
