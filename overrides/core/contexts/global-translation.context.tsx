@@ -4,7 +4,7 @@ import {useIntl, MessageDescriptor} from 'react-intl'
 // Local Resources
 export const GlobalTranslationContext = createContext<Record<string, string>>({})
 
-export const GlobalResourcesProvider: React.FC<{
+export const GlobalTranslationProvider: React.FC<{
     children: React.ReactNode | Array<React.ReactNode>
     resources: Record<string, MessageDescriptor>
 }> = (props) => {
