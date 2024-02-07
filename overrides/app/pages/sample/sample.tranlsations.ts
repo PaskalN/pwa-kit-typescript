@@ -1,7 +1,7 @@
 import {MessageDescriptor} from 'react-intl'
-import {getTranslationCollection} from '../../../core/utils/translation-utils'
+import defaultContext from '../../../../translations/en-GB.json'
 
-const TranslationIDs = [
+const ResourceIDs = [
     'sys_label_forgot_password',
 
     'sys_form_input_email_label',
@@ -30,7 +30,15 @@ const TranslationIDs = [
     'sys_login_page_no_account_description'
 ] as const
 
-const Collection = getTranslationCollection<typeof TranslationIDs>(TranslationIDs)
+const Collector: Record<string, unknown> = {}
 
-export type TranslationsType = Record<(typeof TranslationIDs)[number], string>
-export const Translations = Collection as Record<(typeof TranslationIDs)[number], MessageDescriptor>
+ResourceIDs.forEach((ID) => {
+    Collector[ID] = {
+        id: ID,
+        defaultMessage: defaultContext[ID].defaultMessage
+    }
+})
+
+type ResourcesK = (typeof ResourceIDs)[number]
+export type ResourcesType = Record<ResourcesK, string>
+export const Resources = Collector as Record<ResourcesK, MessageDescriptor>

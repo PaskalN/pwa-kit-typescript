@@ -9,7 +9,7 @@ import {useLocalTranslations} from '../../../../core/hooks/use-translation'
 import {IconShield, IconShieldCheck} from '../icons'
 
 // Other
-import {ResourcesType} from '../../../pages/registration/registration.translations'
+import {TranslationsType} from '../../../pages/registration/registration.translations'
 
 const Check: React.FC<{
     checked: boolean
@@ -29,7 +29,7 @@ const ValidatorPassword: React.FC<{
     const {value = ''} = props
 
     // Hooks
-    const resources = useLocalTranslations<ResourcesType>()
+    const resources = useLocalTranslations<TranslationsType>()
 
     const hasLowercaseLetter = _REGEX.LOWERCASE_LETTERS.test(value)
     const hasUppercaseLetter = _REGEX.UPPERCASE_LETTERS.test(value)

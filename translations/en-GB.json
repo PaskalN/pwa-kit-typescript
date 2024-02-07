@@ -1530,5 +1530,8 @@
   },
   "sys_create_account_page_form_description": {
     "defaultMessage": "Creating an account is fast and easy. Please fill in the following fields."
+  },
+  "sys_test": {
+    "defaultMessage": "Hello {name}!"
   }
 }

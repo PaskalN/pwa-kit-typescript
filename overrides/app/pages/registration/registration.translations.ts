@@ -1,7 +1,7 @@
 import {MessageDescriptor} from 'react-intl'
-import defaultContext from '../../../../translations/en-GB.json'
+import {getTranslationCollection} from '../../../core/utils/translation-utils'
 
-const ResourceIDs = [
+const TranslationIDs = [
     // Global Inputs
     'sys_form_input_select_require',
 
@@ -66,15 +66,7 @@ const ResourceIDs = [
     'sys_create_account_page_form_description'
 ] as const
 
-const Collector: Record<string, unknown> = {}
+const Collection = getTranslationCollection<typeof TranslationIDs>(TranslationIDs)
 
-ResourceIDs.forEach((ID) => {
-    Collector[ID] = {
-        id: ID,
-        defaultMessage: defaultContext[ID].defaultMessage
-    }
-})
-
-type ResourcesK = (typeof ResourceIDs)[number]
-export type ResourcesType = Record<ResourcesK, string>
-export const Resources = Collector as Record<ResourcesK, MessageDescriptor>
+export type TranslationsType = Record<(typeof TranslationIDs)[number], string>
+export const Translations = Collection as Record<(typeof TranslationIDs)[number], MessageDescriptor>

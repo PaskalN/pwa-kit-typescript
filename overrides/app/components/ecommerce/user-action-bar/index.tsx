@@ -13,6 +13,12 @@ import {useCustomerType} from '@salesforce/commerce-sdk-react'
 // Constants
 import {_ROUTERS} from '../../../constants'
 
+// Hooks
+import {useGlobalDiscloser} from '../../../../core/hooks/use-disclosure'
+
+// Others
+import {UseDisclosureReturn} from '@chakra-ui/react'
+
 const CounterLabel: React.FC<{
     number?: number
 }> = (props) => {
@@ -56,6 +62,7 @@ const UseAcrionBar: React.FC<{
     const navigate = useNavigation()
     const location = useLocation()
     const customerType = useCustomerType()
+    const globalDiscloser = useGlobalDiscloser<Disclosers.GLOBAL<UseDisclosureReturn>>()
 
     // Handlers
     const redirectToAccount = () => {
@@ -88,6 +95,14 @@ const UseAcrionBar: React.FC<{
             <Button
                 variant="icon"
                 size="icon_sm"
+                position="relative"
+                onClick={() => globalDiscloser.COUNTRY_SELECTOR.onOpen()}
+            >
+                en
+            </Button>
+            <Button
+                variant="icon"
+                size="icon_sm"
                 disabled={basket.isLoading || !basket}
                 onClick={() => userAccountHandler()}
                 isDisabled={isLoginButtonDisabled()}
@@ -103,6 +118,7 @@ const UseAcrionBar: React.FC<{
                 <IconBasket fontSize="1.25rem" />
                 {!!totalItemsPrint && <CounterLabel number={totalItemsPrint} />}
             </Button>
+
             {children}
         </Flex>
     )

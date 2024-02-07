@@ -11,14 +11,25 @@ module.exports = [
     {
         id: 'RefArch',
         l10n: {
-            supportedCurrencies: ['USD'],
+            supportedCurrencies: ['USD', 'GBP', 'CA', 'EUR'],
             defaultCurrency: 'USD',
             defaultLocale: 'en-US',
             supportedLocales: [
                 {
+                    id: 'it-IT',
+                    preferredCurrency: 'EUR'
+                },
+                {
                     id: 'en-US',
-                    alias: 'us',
                     preferredCurrency: 'USD'
+                },
+                {
+                    id: 'en-CA',
+                    preferredCurrency: 'USD'
+                },
+                {
+                    id: 'en-GB',
+                    preferredCurrency: 'GBP'
                 }
             ]
         }

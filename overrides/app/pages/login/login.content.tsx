@@ -1,4 +1,5 @@
 import React from 'react'
+import {useIntl} from 'react-intl'
 
 // Components
 import {Box, Flex, Text, Heading, Button, UseDisclosureReturn} from '@chakra-ui/react'
@@ -7,22 +8,33 @@ import Modal from '../../components/project/modal'
 import SimpleCard from '../../components/project/simple-card'
 import ResetPasswordForm from '../../components/ecommerce/rest-password-form'
 
-// Others
-import {_ROUTERS} from '../../constants'
-
 // Hooks
 import {useLocalTranslations} from '../../../core/hooks/use-translation'
-import {ResourcesType} from './login.tranlsations'
 import {useRedirectToPage} from '../../utils/site-utils'
 import {useLocalDiscloser} from '../../../core/hooks/use-disclosure'
 
+// Others
+import {_ROUTERS} from '../../constants'
+import {TranslationsType} from './login.tranlsations'
+
 const LoginPageContent: React.FC = () => {
-    const resources = useLocalTranslations<ResourcesType>()
+    const resources = useLocalTranslations<TranslationsType>()
     const redirectToPage = useRedirectToPage()
     const disclosures = useLocalDiscloser<Disclosers.LoginPage<UseDisclosureReturn>>()
 
+    const intl = useIntl()
+
     return (
         <Box layerStyle="page-frame" paddingTop="10rem">
+            {intl.formatMessage(
+                {
+                    id: 'sys_test',
+                    defaultMessage: 'Hello {name}!'
+                },
+                {
+                    name: 'John'
+                }
+            )}
             <Box layerStyle="page-segment">
                 <Heading
                     as="h1"

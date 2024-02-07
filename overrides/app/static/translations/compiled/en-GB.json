@@ -2853,6 +2853,20 @@
       "value": "My account login"
     }
   ],
+  "sys_test": [
+    {
+      "type": 0,
+      "value": "Hello "
+    },
+    {
+      "type": 1,
+      "value": "name"
+    },
+    {
+      "type": 0,
+      "value": "!"
+    }
+  ],
   "toggle_card.action.edit": [
     {
       "type": 0,

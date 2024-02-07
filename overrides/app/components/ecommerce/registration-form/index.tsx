@@ -19,7 +19,7 @@ import {useLocalTranslations} from '../../../../core/hooks/use-translation'
 
 // Others
 import {_REGEX, _ROUTERS} from '../../../constants'
-import {ResourcesType} from '../../../pages/registration/registration.translations'
+import {TranslationsType} from '../../../pages/registration/registration.translations'
 
 // Types
 type FormInputs = {
@@ -75,7 +75,7 @@ type FormInputs = {
 // Local Helpers
 const getInputSettings = (
     form: UseFormReturn<FormInputs, unknown, undefined>,
-    resources: ResourcesType
+    resources: TranslationsType
 ) => {
     const {watch} = form
 
@@ -115,7 +115,7 @@ const RegistrationForm: React.FC = () => {
     const multiSite = useMultiSite()
     const form = useForm<FormInputs>()
     const registration = useAuthHelper(AuthHelpers.Register)
-    const resources = useLocalTranslations<ResourcesType>()
+    const resources = useLocalTranslations<TranslationsType>()
 
     // Props
     const {buildUrl, site, locale} = multiSite

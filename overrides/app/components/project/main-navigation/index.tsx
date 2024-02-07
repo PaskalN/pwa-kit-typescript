@@ -54,6 +54,7 @@ export const NavItem: React.FC<
                     variant="heavy_xl"
                     colorScheme={isSelected ? 'nav_item_selected' : 'nav_item'}
                     textTransform="uppercase"
+                    color="white"
                     _after={{
                         content: '""',
                         display: 'block',

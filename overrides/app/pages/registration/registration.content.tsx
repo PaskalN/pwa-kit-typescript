@@ -14,14 +14,14 @@ import {useLocalTranslations} from '../../../core/hooks/use-translation'
 
 // Others
 import {_ROUTERS} from '../../constants'
-import {ResourcesType} from './registration.translations'
+import {TranslationsType} from './registration.translations'
 
 const RegistrationPageContent: React.FC = () => {
     // Hooks
     const redirectToPage = useRedirectToPage()
     const {isRegistered} = useCustomerType()
 
-    const resources = useLocalTranslations<ResourcesType>()
+    const resources = useLocalTranslations<TranslationsType>()
 
     // Others
     useEffect(() => {

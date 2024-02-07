@@ -1,10 +1,24 @@
+const pageFrame = {
+    display: 'flex',
+    flexDir: 'column',
+    w: '100%'
+}
+
+const pageSegmentClear = {
+    w: '100%',
+    maxW: 'xl',
+    display: 'flex',
+    flexDir: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
+
 export default {
-    'page-frame': {
-        display: 'flex',
-        flexDir: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        w: '100%'
+    'page-frame': pageFrame,
+
+    'page-frame-center': {
+        ...pageFrame,
+        justifyContent: 'center'
     },
 
     'page-section': {
@@ -15,13 +29,10 @@ export default {
         alignItems: 'center'
     },
 
+    'page-segment-clear': pageSegmentClear,
+
     'page-segment': {
-        w: '100%',
-        maxW: 'xl',
-        padding: '1.5rem',
-        display: 'flex',
-        flexDir: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
+        ...pageSegmentClear,
+        padding: '1.5rem'
     }
 }

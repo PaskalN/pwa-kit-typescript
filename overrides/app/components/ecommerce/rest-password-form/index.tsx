@@ -16,7 +16,7 @@ import {useLocalTranslations} from '../../../../core/hooks/use-translation'
 
 // Others
 import {_REGEX} from '../../../constants'
-import {ResourcesType} from '../../../pages/login/login.tranlsations'
+import {TranslationsType} from '../../../pages/login/login.tranlsations'
 
 // Types
 type FormInputs = {
@@ -33,7 +33,7 @@ const ResetPasswordForm: React.FC = () => {
         ShopperCustomersMutations.GetResetPasswordToken
     )
 
-    const resources = useLocalTranslations<ResourcesType>()
+    const resources = useLocalTranslations<TranslationsType>()
 
     // Props
     const {register, handleSubmit, formState} = form
