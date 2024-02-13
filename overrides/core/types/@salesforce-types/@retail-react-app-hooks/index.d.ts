@@ -212,7 +212,7 @@ declare module '@salesforce/retail-react-app/app/hooks/use-intersection-observer
     export default useIntersectionObserver
 }
 
-declare module '@salesforce/retail-react-app/app/hooks/use-wishlist' {
+declare module '@salesforce/retail-react-app/app/hooks/use-wish-list' {
     export type UseWishListProps = {listId: string}
     export const useWishList: (_props?: UseWishListProps) => unknown
 }
