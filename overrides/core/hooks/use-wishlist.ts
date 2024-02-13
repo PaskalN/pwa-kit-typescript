@@ -1,7 +1,7 @@
 import {
     UseWishListProps,
     useWishList as useWishListLegacy
-} from '@salesforce/retail-react-app/app/hooks/use-wishlist'
+} from '@salesforce/retail-react-app/app/hooks/use-wish-list'
 import {UseQueryResult} from '@tanstack/react-query'
 
 import {DataType, ApiClients} from '@salesforce/commerce-sdk-react/hooks/types'
