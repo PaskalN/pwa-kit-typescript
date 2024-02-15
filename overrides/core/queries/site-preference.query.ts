@@ -28,6 +28,7 @@ export function useQuerySitePreferences<T>(
 
             const urlKeys = queryKeys
             delete urlKeys[7]
+            delete urlKeys[8]
 
             const authHeaders = await authHeadersHandler()
             const {shortCode, organizationId, locale, siteId} = config

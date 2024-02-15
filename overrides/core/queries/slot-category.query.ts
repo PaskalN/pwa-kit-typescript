@@ -1,37 +1,34 @@
 import useConfig from '@salesforce/commerce-sdk-react/hooks/useConfig'
-import fetch from 'cross-fetch'
 import {useQuery, UseQueryResult} from '@tanstack/react-query'
+import fetch from 'cross-fetch'
 
 import {
-    useCustomAuthorization,
+    generateCustomApisUrl,
     getCustomQueryKeys,
-    generateCustomApisUrl
+    useCustomAuthorization
 } from '../utils/custom-apis.utils'
 
-export type QueryContentAssetsParams = {assetIDs: Array<string>}
+export type QueryCategorySlotParams = {categoryID: string; slotIDs: Array<string>}
 
-type ErrorQueryAssets = unknown
+type ErrorQuerySlot = unknown
 
-export const useQueryContentAssets = (
-    params: QueryContentAssetsParams
-): UseQueryResult<Record<string, SiteContent.ContentAsset>, ErrorQueryAssets> => {
+export const useQuerySlotCategory = (
+    params: QueryCategorySlotParams
+): UseQueryResult<SiteContent.ContentSlotResult, ErrorQuerySlot> => {
     const authHeadersHandler = useCustomAuthorization({})
     const config = useConfig()
     const queryKeys = getCustomQueryKeys(
         config.proxy,
         'content',
-        'get-assets',
-        params?.assetIDs || []
+        'get-category-slot',
+        params?.slotIDs || [],
+        params.categoryID
     )
 
-    return useQuery<
-        Record<string, SiteContent.ContentAsset>,
-        ErrorQueryAssets,
-        Record<string, SiteContent.ContentAsset>
-    >({
+    return useQuery<SiteContent.ContentSlotResult, ErrorQuerySlot, SiteContent.ContentSlotResult>({
         queryKey: queryKeys,
         queryFn: async () => {
-            if (!params.assetIDs || !params?.assetIDs.length) {
+            if (!params.slotIDs || !params?.slotIDs.length) {
                 return Promise.resolve({})
             }
 
@@ -61,7 +58,11 @@ export const useQueryContentAssets = (
                     },
                     {
                         key: 'c_ids',
-                        value: `(${params.assetIDs.join(',')})`
+                        value: `(${params.slotIDs.join(',')})`
+                    },
+                    {
+                        key: 'c_category',
+                        value: `${params.categoryID}`
                     }
                 ]
             })
@@ -71,17 +72,9 @@ export const useQueryContentAssets = (
                 headers
             })
 
-            const assets =
-                (await response.json()) as unknown as Array<SiteContent.ContentAsset> | null
-            const result: Record<string, SiteContent.ContentAsset> = {}
+            const slots = await response.json()
 
-            if (Array.isArray(assets)) {
-                assets.forEach((asset) => {
-                    result[asset.id] = asset
-                })
-            }
-
-            return result || {}
+            return slots || {}
         }
     })
 }
