@@ -40,6 +40,7 @@ export const useQuerySlotGlobal = (
 
             const urlKeys = queryKeys
             delete urlKeys[7]
+            delete urlKeys[8]
 
             const urlPattrernAssets = urlKeys.filter((key) => typeof key === 'string').join('/')
             const url = generateCustomApisUrl(urlPattrernAssets, {

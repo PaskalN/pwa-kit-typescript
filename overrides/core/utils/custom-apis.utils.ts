@@ -35,7 +35,8 @@ export const getCustomQueryKeys = (
     appOrigin: string,
     api: string,
     endpoint: string,
-    IDs?: Array<string>
+    IDs?: Array<string>,
+    flag?: string
 ): Array<string> => {
     const version = 'v1'
 
@@ -47,7 +48,8 @@ export const getCustomQueryKeys = (
         'organizations',
         '{organizationId}',
         endpoint,
-        ...(IDs ? [IDs.join(',')] : [])
+        ...(IDs ? [IDs.join(',')] : []),
+        flag || ''
     ]
 
     // Use the proxy path when client side request
