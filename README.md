@@ -36,3 +36,6 @@ Enjoy!
 - **config/default.js** - to use values from dw.js
 - **tsconfig.json** - ts config
 - **package.json** - additional command = npm dw:gen
+
+## PWA Kit ##
+**version - 3.2.1**

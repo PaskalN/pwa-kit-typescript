@@ -1,4 +1,4 @@
-export * from '../../core/hooks//use-wishlist'
+export * from '../../core/hooks/use-wishlist'
 
 // Extend modules or replace method below
 // Exampe:
