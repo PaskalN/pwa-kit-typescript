@@ -8,7 +8,11 @@ import {
     useCustomAuthorization
 } from '../utils/custom-apis.utils'
 
-export type QueryCategorySlotParams = {categoryID: string; slotIDs: Array<string>}
+export type QueryCategorySlotParams = {
+    categoryID: string
+    slotIDs: Array<string>
+    useToken?: boolean
+}
 
 type ErrorQuerySlot = unknown
 
@@ -44,27 +48,37 @@ export const useQuerySlotCategory = (
             delete urlKeys[8]
 
             const urlPattrernAssets = urlKeys.filter((key) => typeof key === 'string').join('/')
+
+            const parameters = [
+                {
+                    key: 'siteId',
+                    value: siteId
+                },
+                {
+                    key: 'locale',
+                    value: locale
+                },
+                {
+                    key: 'c_ids',
+                    value: `(${params.slotIDs.join(',')})`
+                },
+                {
+                    key: 'c_category',
+                    value: `${params.categoryID}`
+                }
+            ]
+
+            if (params.useToken) {
+                parameters.push({
+                    key: 'c_shopper_token',
+                    value: `Bearer ${authHeaders.access_token}`
+                })
+            }
+
             const url = generateCustomApisUrl(urlPattrernAssets, {
                 shortCode,
                 organizationId,
-                params: [
-                    {
-                        key: 'siteId',
-                        value: siteId
-                    },
-                    {
-                        key: 'locale',
-                        value: locale
-                    },
-                    {
-                        key: 'c_ids',
-                        value: `(${params.slotIDs.join(',')})`
-                    },
-                    {
-                        key: 'c_category',
-                        value: `${params.categoryID}`
-                    }
-                ]
+                params: parameters
             })
 
             const response = await fetch(url, {
