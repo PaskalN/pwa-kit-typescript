@@ -1,14 +1,14 @@
 import useConfig from '@salesforce/commerce-sdk-react/hooks/useConfig'
-import fetch from 'cross-fetch'
 import {useQuery, UseQueryResult} from '@tanstack/react-query'
+import fetch from 'cross-fetch'
 
 import {
-    useCustomAuthorization,
+    generateCustomApisUrl,
     getCustomQueryKeys,
-    generateCustomApisUrl
+    useCustomAuthorization
 } from '../utils/custom-apis.utils'
 
-export type QueryGlobalSlotParams = {slotIDs: Array<string>}
+export type QueryGlobalSlotParams = {slotIDs: Array<string>; useToken?: boolean}
 
 type ErrorQuerySlot = unknown
 
@@ -43,23 +43,33 @@ export const useQuerySlotGlobal = (
             delete urlKeys[8]
 
             const urlPattrernAssets = urlKeys.filter((key) => typeof key === 'string').join('/')
+
+            const parameters = [
+                {
+                    key: 'siteId',
+                    value: siteId
+                },
+                {
+                    key: 'locale',
+                    value: locale
+                },
+                {
+                    key: 'c_ids',
+                    value: `(${params.slotIDs.join(',')})`
+                }
+            ]
+
+            if (params.useToken) {
+                parameters.push({
+                    key: 'c_shopper_token',
+                    value: `Bearer ${authHeaders.access_token}`
+                })
+            }
+
             const url = generateCustomApisUrl(urlPattrernAssets, {
                 shortCode,
                 organizationId,
-                params: [
-                    {
-                        key: 'siteId',
-                        value: siteId
-                    },
-                    {
-                        key: 'locale',
-                        value: locale
-                    },
-                    {
-                        key: 'c_ids',
-                        value: `(${params.slotIDs.join(',')})`
-                    }
-                ]
+                params: parameters
             })
 
             const response = await fetch(url, {
