@@ -237,3 +237,43 @@ declare module '@salesforce/retail-react-app/app/utils/utils' {
 
     export const isHydrated: () => boolean
 }
+
+declare module '@salesforce/retail-react-app/app/utils/test-utils' {
+    export const guestToken: string
+
+    export const registerUserToken: string
+
+    export const DEFAULT_LOCALE: string
+
+    export const DEFAULT_CURRENCY: string
+
+    export const SUPPORTED_LOCALES: Array<{id: string; preferredCurrency: string}>
+
+    export const DEFAULT_SITE: string
+
+    export const renderWithReactIntl: (node: React.ReactNode, locale?: string) => void
+
+    export const renderWithRouter: (node: React.ReactNode) => void
+
+    export const TestProviders: (props: {
+        children: React.ReactNode
+        locale?: {id: string}
+        messages?: Record<string, unknown>
+        appConfig?: Record<string, unknown>
+        siteAlias?: string
+        isGuest?: boolean
+        bypassAuth?: boolean
+    }) => React.ReactElement
+
+    export const renderWithProviders: (
+        children: React.ReactNode,
+        options: Record<string, unknown>
+    ) => Record<string, unknown>
+
+    export const createPathWithDefaults: (path: string) => string
+
+    export const withPageProvider: (
+        Component: React.ReactNode,
+        options: Record<string, unknown>
+    ) => React.ReactNode
+}
